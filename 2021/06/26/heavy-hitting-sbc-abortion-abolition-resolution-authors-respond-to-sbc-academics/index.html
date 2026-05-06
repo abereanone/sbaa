@@ -1,0 +1,1477 @@
+<!doctype html>
+<html lang="en">
+
+
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="profile" href="https://gmpg.org/xfn/11" />
+	<title>Heavy-hitting SBC Abortion Abolition Resolution Authors Respond to SBC Academics &#8211; Southern Baptists for Abolishing Abortion</title>
+<meta name='robots' content='max-image-preview:large' />
+
+<!-- Async WordPress.com Remote Login -->
+<script id="wpcom_remote_login_js">
+var wpcom_remote_login_extra_auth = '';
+function wpcom_remote_login_remove_dom_node_id( element_id ) {
+	var dom_node = document.getElementById( element_id );
+	if ( dom_node ) { dom_node.parentNode.removeChild( dom_node ); }
+}
+function wpcom_remote_login_remove_dom_node_classes( class_name ) {
+	var dom_nodes = document.querySelectorAll( '.' + class_name );
+	for ( var i = 0; i < dom_nodes.length; i++ ) {
+		dom_nodes[ i ].parentNode.removeChild( dom_nodes[ i ] );
+	}
+}
+function wpcom_remote_login_final_cleanup() {
+	wpcom_remote_login_remove_dom_node_classes( "wpcom_remote_login_msg" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_validate" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_js" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_iframe" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_styles" );
+}
+
+// Watch for messages back from the remote login
+window.addEventListener( "message", function( e ) {
+	if ( e.origin === "https://r-login.wordpress.com/" ) {
+		var data = {};
+		try {
+			data = JSON.parse( e.data );
+		} catch( e ) {
+			wpcom_remote_login_final_cleanup();
+			return;
+		}
+
+		if ( data.msg === 'LOGIN' ) {
+			// Clean up the login check iframe
+			wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+
+			var id_regex = new RegExp( /^[0-9]+$/ );
+			var token_regex = new RegExp( /^.*|.*|.*$/ );
+			if (
+				token_regex.test( data.token )
+				&& id_regex.test( data.wpcomid )
+			) {
+				// We have everything we need to ask for a login
+				var script = document.createElement( "script" );
+				script.setAttribute( "id", "wpcom_remote_login_validate" );
+				script.src = '../../../../remote-login4f98.html?wpcom_remote_login=validate'
+					+ '&wpcomid=' + data.wpcomid
+					+ '&token=' + encodeURIComponent( data.token )
+					+ '&host=' + window.location.protocol
+					+ '//' + window.location.hostname
+					+ '&postid=278'
+					+ '&is_singular=1';
+				document.body.appendChild( script );
+			}
+
+			return;
+		}
+
+		// Safari ITP, not logged in, so redirect
+		if ( data.msg === 'LOGIN-REDIRECT' ) {
+			window.location = 'https://wordpress.com/log-in?redirect_to=' + window.location.href;
+			return;
+		}
+
+		// Safari ITP, storage access failed, remove the request
+		if ( data.msg === 'LOGIN-REMOVE' ) {
+			var css_zap = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } @media screen and ( max-width: 782px ) { html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } }';
+			var style_zap = document.createElement( 'style' );
+			style_zap.type = 'text/css';
+			style_zap.appendChild( document.createTextNode( css_zap ) );
+			document.body.appendChild( style_zap );
+
+			var e = document.getElementById( 'wpcom_request_access_iframe' );
+			e.parentNode.removeChild( e );
+
+			document.cookie = 'wordpress_com_login_access=denied; path=/; max-age=31536000';
+
+			return;
+		}
+
+		// Safari ITP
+		if ( data.msg === 'REQUEST_ACCESS' ) {
+			console.log( 'request access: safari' );
+
+			// Check ITP iframe enable/disable knob
+			if ( wpcom_remote_login_extra_auth !== 'safari_itp_iframe' ) {
+				return;
+			}
+
+			// If we are in a "private window" there is no ITP.
+			var private_window = false;
+			try {
+				var opendb = window.openDatabase( null, null, null, null );
+			} catch( e ) {
+				private_window = true;
+			}
+
+			if ( private_window ) {
+				console.log( 'private window' );
+				return;
+			}
+
+			var iframe = document.createElement( 'iframe' );
+			iframe.id = 'wpcom_request_access_iframe';
+			iframe.setAttribute( 'scrolling', 'no' );
+			iframe.setAttribute( 'sandbox', 'allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-top-navigation-by-user-activation' );
+			iframe.src = 'https://r-login.wordpress.com/remote-login.php?wpcom_remote_login=request_access&amp;origin=' + encodeURIComponent( data.origin ) + '&wpcomid=' + encodeURIComponent( data.wpcomid );
+
+			var css = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 46px !important; } * html body { margin-top: 46px !important; } @media screen and ( max-width: 660px ) { html { margin-top: 71px !important; } * html body { margin-top: 71px !important; } #wpcom_request_access_iframe { display: block; height: 71px !important; } } #wpcom_request_access_iframe { border: 0px; height: 46px; position: fixed; top: 0; left: 0; width: 100%; min-width: 100%; z-index: 99999; background: #23282d; } ';
+
+			var style = document.createElement( 'style' );
+			style.type = 'text/css';
+			style.id = 'wpcom_request_access_styles';
+			style.appendChild( document.createTextNode( css ) );
+			document.body.appendChild( style );
+
+			document.body.appendChild( iframe );
+		}
+
+		if ( data.msg === 'DONE' ) {
+			wpcom_remote_login_final_cleanup();
+		}
+	}
+}, false );
+
+// Inject the remote login iframe after the page has had a chance to load
+// more critical resources
+window.addEventListener( "DOMContentLoaded", function( e ) {
+	var iframe = document.createElement( "iframe" );
+	iframe.style.display = "none";
+	iframe.setAttribute( "scrolling", "no" );
+	iframe.setAttribute( "id", "wpcom_remote_login_key" );
+	iframe.src = "https://r-login.wordpress.com/remote-login.php"
+		+ "?wpcom_remote_login=key"
+		+ "&origin=aHR0cHM6Ly9zb3V0aGVybmJhcHRpc3RzYWJvbGlzaGluZ2Fib3J0aW9uLmNvbQ%3D%3D"
+		+ "&wpcomid=178169672"
+		+ "&time=" + Math.floor( Date.now() / 1000 );
+	document.body.appendChild( iframe );
+}, false );
+</script>
+<link rel='dns-prefetch' href='http://s1.wp.com/' />
+<link rel='dns-prefetch' href='http://s2.wp.com/' />
+<link rel='dns-prefetch' href='http://widgets.wp.com/' />
+<link rel='dns-prefetch' href='http://wordpress.com/' />
+<link rel='dns-prefetch' href='http://fonts-api.wp.com/' />
+<link rel='dns-prefetch' href='http://s0.wp.com/' />
+<link rel="alternate" type="application/rss+xml" title="Southern Baptists for Abolishing Abortion &raquo; Feed" href="../../../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Southern Baptists for Abolishing Abortion &raquo; Comments Feed" href="../../../../comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Southern Baptists for Abolishing Abortion &raquo; Heavy-hitting SBC Abortion Abolition Resolution Authors Respond to SBC&nbsp;Academics Comments Feed" href="feed/index.html" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+	<link crossorigin='anonymous' rel='stylesheet' id='all-css-0-1' href='../../../../_static/indexd259.html??-eJxtjEsKgDAMBS9kjbqwuBDPUtog9o9J8fpaEQSRBw8GhoEjC50iY2QIRWRf1i0SWOSstHsYQkr1TPFIsKNXjEbkRPyhVhM18J/0m8M3fFPVlzD3UnbTtWG0J2CTNNk=&amp;cssminify=yes' type='text/css' media='all' />
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-content/plugins/gutenberg-core/v23.0.1/build/styles/block-library/common.min.css */
+</style>
+<style id="wp-block-heading-inline-css">
+h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-background,h3:where(.wp-block-heading).has-background,h4:where(.wp-block-heading).has-background,h5:where(.wp-block-heading).has-background,h6:where(.wp-block-heading).has-background{padding:1.25em 2.375em}h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]){rotate:180deg}
+/*# sourceURL=https://s1.wp.com/wp-content/plugins/gutenberg-core/v23.0.1/build/styles/block-library/heading/style.min.css */
+</style>
+<style id="wp-block-image-inline-css">
+.wp-block-image>a,.wp-block-image>figure>a{display:inline-block}.wp-block-image img{box-sizing:border-box;height:auto;max-width:100%;vertical-align:bottom}@media not (prefers-reduced-motion){.wp-block-image img.hide{visibility:hidden}.wp-block-image img.show{animation:show-content-image .4s}}.wp-block-image[style*=border-radius] img,.wp-block-image[style*=border-radius]>a{border-radius:inherit}.wp-block-image.has-custom-border img{box-sizing:border-box}.wp-block-image.aligncenter{text-align:center}.wp-block-image.alignfull>a,.wp-block-image.alignwide>a{width:100%}.wp-block-image.alignfull img,.wp-block-image.alignwide img{height:auto;width:100%}.wp-block-image .aligncenter,.wp-block-image .alignleft,.wp-block-image .alignright,.wp-block-image.aligncenter,.wp-block-image.alignleft,.wp-block-image.alignright{display:table}.wp-block-image .aligncenter>figcaption,.wp-block-image .alignleft>figcaption,.wp-block-image .alignright>figcaption,.wp-block-image.aligncenter>figcaption,.wp-block-image.alignleft>figcaption,.wp-block-image.alignright>figcaption{caption-side:bottom;display:table-caption}.wp-block-image .alignleft{float:left;margin:.5em 1em .5em 0}.wp-block-image .alignright{float:right;margin:.5em 0 .5em 1em}.wp-block-image .aligncenter{margin-left:auto;margin-right:auto}.wp-block-image :where(figcaption){margin-bottom:1em;margin-top:.5em}.wp-block-image.is-style-circle-mask img{border-radius:9999px}@supports ((-webkit-mask-image:none) or (mask-image:none)) or (-webkit-mask-image:none){.wp-block-image.is-style-circle-mask img{border-radius:0;-webkit-mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');mask-mode:alpha;-webkit-mask-position:center;mask-position:center;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:contain;mask-size:contain}}:root :where(.wp-block-image.is-style-rounded img,.wp-block-image .is-style-rounded img){border-radius:9999px}.wp-block-image figure{margin:0}.wp-lightbox-container{display:flex;flex-direction:column;position:relative}.wp-lightbox-container img{cursor:zoom-in}.wp-lightbox-container img:hover+button{opacity:1}.wp-lightbox-container button{align-items:center;backdrop-filter:blur(16px) saturate(180%);background-color:#5a5a5a40;border:none;border-radius:4px;cursor:zoom-in;display:flex;height:20px;justify-content:center;opacity:0;padding:0;position:absolute;right:16px;text-align:center;top:16px;width:20px;z-index:100}@media not (prefers-reduced-motion){.wp-lightbox-container button{transition:opacity .2s ease}}.wp-lightbox-container button:focus-visible{outline:3px auto #5a5a5a40;outline:3px auto -webkit-focus-ring-color;outline-offset:3px}.wp-lightbox-container button:hover{cursor:pointer;opacity:1}.wp-lightbox-container button:focus{opacity:1}.wp-lightbox-container button:focus,.wp-lightbox-container button:hover,.wp-lightbox-container button:not(:hover):not(:active):not(.has-background){background-color:#5a5a5a40;border:none}.wp-lightbox-overlay{box-sizing:border-box;cursor:zoom-out;height:100vh;left:0;overflow:hidden;position:fixed;top:0;visibility:hidden;width:100%;z-index:100000}.wp-lightbox-overlay .wp-lightbox-close-button{align-items:center;cursor:pointer;display:flex;font-family:inherit;gap:8px;justify-content:center;line-height:1;min-height:40px;min-width:40px;padding:0 4px;position:absolute;right:calc(env(safe-area-inset-right) + 16px);top:calc(env(safe-area-inset-top) + 16px);z-index:5000000}.wp-lightbox-overlay .wp-lightbox-close-button:focus,.wp-lightbox-overlay .wp-lightbox-close-button:hover,.wp-lightbox-overlay .wp-lightbox-close-button:not(:hover):not(:active):not(.has-background){background:none;border:none}.wp-lightbox-overlay .wp-lightbox-close-button:has(.wp-lightbox-close-text:not([hidden])) .wp-lightbox-close-icon svg{height:1em;width:1em}.wp-lightbox-overlay .wp-lightbox-close-icon svg{display:block}.wp-lightbox-overlay .wp-lightbox-navigation-button-next,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev{align-items:center;bottom:16px;cursor:pointer;display:flex;font-family:inherit;gap:4px;justify-content:center;line-height:1;min-height:40px;min-width:40px;padding:0 8px;position:absolute;z-index:2000002}.wp-lightbox-overlay .wp-lightbox-navigation-button-next[hidden],.wp-lightbox-overlay .wp-lightbox-navigation-button-prev[hidden]{display:none}@media (min-width:960px){.wp-lightbox-overlay .wp-lightbox-navigation-button-next,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev{bottom:50%;transform:translateY(-50%)}}.wp-lightbox-overlay .wp-lightbox-navigation-button-next:focus,.wp-lightbox-overlay .wp-lightbox-navigation-button-next:hover,.wp-lightbox-overlay .wp-lightbox-navigation-button-next:not(:hover):not(:active):not(.has-background),.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:focus,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:hover,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:not(:hover):not(:active):not(.has-background){background:none;border:none;padding:0 8px}.wp-lightbox-overlay .wp-lightbox-navigation-button-next:has(.wp-lightbox-navigation-text:not([hidden])) .wp-lightbox-navigation-icon svg,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:has(.wp-lightbox-navigation-text:not([hidden])) .wp-lightbox-navigation-icon svg{display:block;height:1.5em;width:1.5em}.wp-lightbox-overlay .wp-lightbox-navigation-button-prev{left:calc(env(safe-area-inset-left) + 16px)}.wp-lightbox-overlay .wp-lightbox-navigation-button-next{right:calc(env(safe-area-inset-right) + 16px)}.wp-lightbox-overlay .wp-lightbox-navigation-icon svg{vertical-align:middle}.wp-lightbox-overlay .lightbox-image-container{height:var(--wp--lightbox-container-height);left:50%;overflow:hidden;position:absolute;top:50%;transform:translate(-50%,-50%);transform-origin:top left;width:var(--wp--lightbox-container-width);z-index:2000001}.wp-lightbox-overlay .wp-block-image{align-items:center;box-sizing:border-box;display:flex;height:100%;justify-content:center;margin:0;position:relative;transform-origin:0 0;width:100%;z-index:3000000}.wp-lightbox-overlay .wp-block-image img{height:var(--wp--lightbox-image-height);min-height:var(--wp--lightbox-image-height);min-width:var(--wp--lightbox-image-width);width:var(--wp--lightbox-image-width)}.wp-lightbox-overlay .wp-block-image figcaption{display:none}.wp-lightbox-overlay button{background:none;border:none}.wp-lightbox-overlay .scrim{background-color:#fff;height:100%;opacity:.9;position:absolute;width:100%;z-index:2000000}.wp-lightbox-overlay.active{visibility:visible}@media not (prefers-reduced-motion){.wp-lightbox-overlay.active{animation:turn-on-visibility .25s both}.wp-lightbox-overlay.active img{animation:turn-on-visibility .35s both}.wp-lightbox-overlay.show-closing-animation:not(.active){animation:turn-off-visibility .35s both}.wp-lightbox-overlay.show-closing-animation:not(.active) img{animation:turn-off-visibility .25s both}.wp-lightbox-overlay.zoom.active{animation:none;opacity:1;visibility:visible}.wp-lightbox-overlay.zoom.active .lightbox-image-container{animation:lightbox-zoom-in .4s}.wp-lightbox-overlay.zoom.active .lightbox-image-container img{animation:none}.wp-lightbox-overlay.zoom.active .scrim{animation:turn-on-visibility .4s forwards}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active){animation:none}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .lightbox-image-container{animation:lightbox-zoom-out .4s}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .lightbox-image-container img{animation:none}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .scrim{animation:turn-off-visibility .4s forwards}}@keyframes show-content-image{0%{visibility:hidden}99%{visibility:hidden}to{visibility:visible}}@keyframes turn-on-visibility{0%{opacity:0}to{opacity:1}}@keyframes turn-off-visibility{0%{opacity:1;visibility:visible}99%{opacity:0;visibility:visible}to{opacity:0;visibility:hidden}}@keyframes lightbox-zoom-in{0%{transform:translate(calc((-100vw + var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale))}to{transform:translate(-50%,-50%) scale(1)}}@keyframes lightbox-zoom-out{0%{transform:translate(-50%,-50%) scale(1);visibility:visible}99%{visibility:visible}to{transform:translate(calc((-100vw + var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale));visibility:hidden}}
+/*# sourceURL=https://s1.wp.com/wp-content/plugins/gutenberg-core/v23.0.1/build/styles/block-library/image/style.min.css */
+</style>
+<style id="wp-block-image-theme-inline-css">
+:root :where(.wp-block-image figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme :root :where(.wp-block-image figcaption){color:#ffffffa6}.wp-block-image{margin:0 0 1em}
+/*# sourceURL=https://s1.wp.com/wp-content/plugins/gutenberg-core/v23.0.1/build/styles/block-library/image/theme.min.css */
+</style>
+<style id="wp-block-list-inline-css">
+ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:1.25em 2.375em}
+/*# sourceURL=https://s1.wp.com/wp-content/plugins/gutenberg-core/v23.0.1/build/styles/block-library/list/style.min.css */
+</style>
+<style id="wp-block-paragraph-inline-css">
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=https://s1.wp.com/wp-content/plugins/gutenberg-core/v23.0.1/build/styles/block-library/paragraph/style.min.css */
+</style>
+<style id="wp-block-library-inline-css-extra">
+.has-text-align-justify {
+	text-align:justify;
+}
+.has-text-align-justify{text-align:justify;}
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+
+<style id="classic-theme-styles-inline-css">
+.wp-block-button__link{background-color:#32373c;border-radius:9999px;box-shadow:none;color:#fff;font-size:1.125em;padding:calc(.667em + 2px) calc(1.333em + 2px);text-decoration:none}.wp-block-file__button{background:#32373c;color:#fff}.wp-block-accordion-heading{margin:0}.wp-block-accordion-heading__toggle{background-color:inherit!important;color:inherit!important}.wp-block-accordion-heading__toggle:not(:focus-visible){outline:none}.wp-block-accordion-heading__toggle:focus,.wp-block-accordion-heading__toggle:hover{background-color:inherit!important;border:none;box-shadow:none;color:inherit;padding:var(--wp--preset--spacing--20,1em) 0;text-decoration:none}.wp-block-accordion-heading__toggle:focus-visible{outline:auto;outline-offset:0}
+/*# sourceURL=/wp-content/plugins/gutenberg-core/v23.0.1/build/styles/block-library/classic.min.css */
+</style>
+
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-8-1' href='../../../../_static/index8576.html??-eJx9jEEOAiEQBD/kQECjeDC+ZWEnijIwYWA3/l72op689KFTVXplCCU3zE1z6reYRYfiUwlP0VYZpwxIJE4IFRd10HOU9iFA2iuhCiI7/ROiDt9WxfETT20jCOc4YUIa2D9t5eGA91xRBMZS7ATtPkTZvCtdzNEZt7f2fHq8Afl7R7w=&amp;cssminify=yes' type='text/css' media='all' />
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--primary: #1279BE;--wp--preset--color--secondary: #FFB302;--wp--preset--color--foreground: #303030;--wp--preset--color--background: #FFFFFF;--wp--preset--color--tertiary: #C5C5C5;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 17.3914px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 26.45px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 23px;--wp--preset--font-size--huge: 30.4174px;--wp--preset--font-family--albert-sans: 'Albert Sans', sans-serif;--wp--preset--font-family--alegreya: Alegreya, serif;--wp--preset--font-family--arvo: Arvo, serif;--wp--preset--font-family--bodoni-moda: 'Bodoni Moda', serif;--wp--preset--font-family--bricolage-grotesque: 'Bricolage Grotesque', sans-serif;--wp--preset--font-family--cabin: Cabin, sans-serif;--wp--preset--font-family--chivo: Chivo, sans-serif;--wp--preset--font-family--commissioner: Commissioner, sans-serif;--wp--preset--font-family--cormorant: Cormorant, serif;--wp--preset--font-family--courier-prime: 'Courier Prime', monospace;--wp--preset--font-family--crimson-pro: 'Crimson Pro', serif;--wp--preset--font-family--dm-mono: 'DM Mono', monospace;--wp--preset--font-family--dm-sans: 'DM Sans', sans-serif;--wp--preset--font-family--dm-serif-display: 'DM Serif Display', serif;--wp--preset--font-family--domine: Domine, serif;--wp--preset--font-family--eb-garamond: 'EB Garamond', serif;--wp--preset--font-family--epilogue: Epilogue, sans-serif;--wp--preset--font-family--fahkwang: Fahkwang, sans-serif;--wp--preset--font-family--figtree: Figtree, sans-serif;--wp--preset--font-family--fira-sans: 'Fira Sans', sans-serif;--wp--preset--font-family--fjalla-one: 'Fjalla One', sans-serif;--wp--preset--font-family--fraunces: Fraunces, serif;--wp--preset--font-family--gabarito: Gabarito, system-ui;--wp--preset--font-family--ibm-plex-mono: 'IBM Plex Mono', monospace;--wp--preset--font-family--ibm-plex-sans: 'IBM Plex Sans', sans-serif;--wp--preset--font-family--ibarra-real-nova: 'Ibarra Real Nova', serif;--wp--preset--font-family--instrument-serif: 'Instrument Serif', serif;--wp--preset--font-family--inter: Inter, sans-serif;--wp--preset--font-family--josefin-sans: 'Josefin Sans', sans-serif;--wp--preset--font-family--jost: Jost, sans-serif;--wp--preset--font-family--libre-baskerville: 'Libre Baskerville', serif;--wp--preset--font-family--libre-franklin: 'Libre Franklin', sans-serif;--wp--preset--font-family--literata: Literata, serif;--wp--preset--font-family--lora: Lora, serif;--wp--preset--font-family--merriweather: Merriweather, serif;--wp--preset--font-family--montserrat: Montserrat, sans-serif;--wp--preset--font-family--newsreader: Newsreader, serif;--wp--preset--font-family--noto-sans-mono: 'Noto Sans Mono', sans-serif;--wp--preset--font-family--nunito: Nunito, sans-serif;--wp--preset--font-family--open-sans: 'Open Sans', sans-serif;--wp--preset--font-family--overpass: Overpass, sans-serif;--wp--preset--font-family--pt-serif: 'PT Serif', serif;--wp--preset--font-family--petrona: Petrona, serif;--wp--preset--font-family--piazzolla: Piazzolla, serif;--wp--preset--font-family--playfair-display: 'Playfair Display', serif;--wp--preset--font-family--plus-jakarta-sans: 'Plus Jakarta Sans', sans-serif;--wp--preset--font-family--poppins: Poppins, sans-serif;--wp--preset--font-family--raleway: Raleway, sans-serif;--wp--preset--font-family--roboto: Roboto, sans-serif;--wp--preset--font-family--roboto-slab: 'Roboto Slab', serif;--wp--preset--font-family--rubik: Rubik, sans-serif;--wp--preset--font-family--rufina: Rufina, serif;--wp--preset--font-family--sora: Sora, sans-serif;--wp--preset--font-family--source-sans-3: 'Source Sans 3', sans-serif;--wp--preset--font-family--source-serif-4: 'Source Serif 4', serif;--wp--preset--font-family--space-mono: 'Space Mono', monospace;--wp--preset--font-family--syne: Syne, sans-serif;--wp--preset--font-family--texturina: Texturina, serif;--wp--preset--font-family--urbanist: Urbanist, sans-serif;--wp--preset--font-family--work-sans: 'Work Sans', sans-serif;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.wp-site-blocks) > * { margin-block-start: 24px; margin-block-end: 0; }:where(.wp-site-blocks) > :first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child { margin-block-end: 0; }:root { --wp--style--block-gap: 24px; }:root :where(.is-layout-flow) > :first-child{margin-block-start: 0;}:root :where(.is-layout-flow) > :last-child{margin-block-end: 0;}:root :where(.is-layout-flow) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-constrained) > :first-child{margin-block-start: 0;}:root :where(.is-layout-constrained) > :last-child{margin-block-end: 0;}:root :where(.is-layout-constrained) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-flex){gap: 24px;}:root :where(.is-layout-grid){gap: 24px;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-primary-color{color: var(--wp--preset--color--primary) !important;}.has-secondary-color{color: var(--wp--preset--color--secondary) !important;}.has-foreground-color{color: var(--wp--preset--color--foreground) !important;}.has-background-color{color: var(--wp--preset--color--background) !important;}.has-tertiary-color{color: var(--wp--preset--color--tertiary) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-primary-background-color{background-color: var(--wp--preset--color--primary) !important;}.has-secondary-background-color{background-color: var(--wp--preset--color--secondary) !important;}.has-foreground-background-color{background-color: var(--wp--preset--color--foreground) !important;}.has-background-background-color{background-color: var(--wp--preset--color--background) !important;}.has-tertiary-background-color{background-color: var(--wp--preset--color--tertiary) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-primary-border-color{border-color: var(--wp--preset--color--primary) !important;}.has-secondary-border-color{border-color: var(--wp--preset--color--secondary) !important;}.has-foreground-border-color{border-color: var(--wp--preset--color--foreground) !important;}.has-background-border-color{border-color: var(--wp--preset--color--background) !important;}.has-tertiary-border-color{border-color: var(--wp--preset--color--tertiary) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.has-normal-font-size{font-size: var(--wp--preset--font-size--normal) !important;}.has-huge-font-size{font-size: var(--wp--preset--font-size--huge) !important;}.has-albert-sans-font-family{font-family: var(--wp--preset--font-family--albert-sans) !important;}.has-alegreya-font-family{font-family: var(--wp--preset--font-family--alegreya) !important;}.has-arvo-font-family{font-family: var(--wp--preset--font-family--arvo) !important;}.has-bodoni-moda-font-family{font-family: var(--wp--preset--font-family--bodoni-moda) !important;}.has-bricolage-grotesque-font-family{font-family: var(--wp--preset--font-family--bricolage-grotesque) !important;}.has-cabin-font-family{font-family: var(--wp--preset--font-family--cabin) !important;}.has-chivo-font-family{font-family: var(--wp--preset--font-family--chivo) !important;}.has-commissioner-font-family{font-family: var(--wp--preset--font-family--commissioner) !important;}.has-cormorant-font-family{font-family: var(--wp--preset--font-family--cormorant) !important;}.has-courier-prime-font-family{font-family: var(--wp--preset--font-family--courier-prime) !important;}.has-crimson-pro-font-family{font-family: var(--wp--preset--font-family--crimson-pro) !important;}.has-dm-mono-font-family{font-family: var(--wp--preset--font-family--dm-mono) !important;}.has-dm-sans-font-family{font-family: var(--wp--preset--font-family--dm-sans) !important;}.has-dm-serif-display-font-family{font-family: var(--wp--preset--font-family--dm-serif-display) !important;}.has-domine-font-family{font-family: var(--wp--preset--font-family--domine) !important;}.has-eb-garamond-font-family{font-family: var(--wp--preset--font-family--eb-garamond) !important;}.has-epilogue-font-family{font-family: var(--wp--preset--font-family--epilogue) !important;}.has-fahkwang-font-family{font-family: var(--wp--preset--font-family--fahkwang) !important;}.has-figtree-font-family{font-family: var(--wp--preset--font-family--figtree) !important;}.has-fira-sans-font-family{font-family: var(--wp--preset--font-family--fira-sans) !important;}.has-fjalla-one-font-family{font-family: var(--wp--preset--font-family--fjalla-one) !important;}.has-fraunces-font-family{font-family: var(--wp--preset--font-family--fraunces) !important;}.has-gabarito-font-family{font-family: var(--wp--preset--font-family--gabarito) !important;}.has-ibm-plex-mono-font-family{font-family: var(--wp--preset--font-family--ibm-plex-mono) !important;}.has-ibm-plex-sans-font-family{font-family: var(--wp--preset--font-family--ibm-plex-sans) !important;}.has-ibarra-real-nova-font-family{font-family: var(--wp--preset--font-family--ibarra-real-nova) !important;}.has-instrument-serif-font-family{font-family: var(--wp--preset--font-family--instrument-serif) !important;}.has-inter-font-family{font-family: var(--wp--preset--font-family--inter) !important;}.has-josefin-sans-font-family{font-family: var(--wp--preset--font-family--josefin-sans) !important;}.has-jost-font-family{font-family: var(--wp--preset--font-family--jost) !important;}.has-libre-baskerville-font-family{font-family: var(--wp--preset--font-family--libre-baskerville) !important;}.has-libre-franklin-font-family{font-family: var(--wp--preset--font-family--libre-franklin) !important;}.has-literata-font-family{font-family: var(--wp--preset--font-family--literata) !important;}.has-lora-font-family{font-family: var(--wp--preset--font-family--lora) !important;}.has-merriweather-font-family{font-family: var(--wp--preset--font-family--merriweather) !important;}.has-montserrat-font-family{font-family: var(--wp--preset--font-family--montserrat) !important;}.has-newsreader-font-family{font-family: var(--wp--preset--font-family--newsreader) !important;}.has-noto-sans-mono-font-family{font-family: var(--wp--preset--font-family--noto-sans-mono) !important;}.has-nunito-font-family{font-family: var(--wp--preset--font-family--nunito) !important;}.has-open-sans-font-family{font-family: var(--wp--preset--font-family--open-sans) !important;}.has-overpass-font-family{font-family: var(--wp--preset--font-family--overpass) !important;}.has-pt-serif-font-family{font-family: var(--wp--preset--font-family--pt-serif) !important;}.has-petrona-font-family{font-family: var(--wp--preset--font-family--petrona) !important;}.has-piazzolla-font-family{font-family: var(--wp--preset--font-family--piazzolla) !important;}.has-playfair-display-font-family{font-family: var(--wp--preset--font-family--playfair-display) !important;}.has-plus-jakarta-sans-font-family{font-family: var(--wp--preset--font-family--plus-jakarta-sans) !important;}.has-poppins-font-family{font-family: var(--wp--preset--font-family--poppins) !important;}.has-raleway-font-family{font-family: var(--wp--preset--font-family--raleway) !important;}.has-roboto-font-family{font-family: var(--wp--preset--font-family--roboto) !important;}.has-roboto-slab-font-family{font-family: var(--wp--preset--font-family--roboto-slab) !important;}.has-rubik-font-family{font-family: var(--wp--preset--font-family--rubik) !important;}.has-rufina-font-family{font-family: var(--wp--preset--font-family--rufina) !important;}.has-sora-font-family{font-family: var(--wp--preset--font-family--sora) !important;}.has-source-sans-3-font-family{font-family: var(--wp--preset--font-family--source-sans-3) !important;}.has-source-serif-4-font-family{font-family: var(--wp--preset--font-family--source-serif-4) !important;}.has-space-mono-font-family{font-family: var(--wp--preset--font-family--space-mono) !important;}.has-syne-font-family{font-family: var(--wp--preset--font-family--syne) !important;}.has-texturina-font-family{font-family: var(--wp--preset--font-family--texturina) !important;}.has-urbanist-font-family{font-family: var(--wp--preset--font-family--urbanist) !important;}.has-work-sans-font-family{font-family: var(--wp--preset--font-family--work-sans) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-10-1' href='../../../../wp-content/mu-plugins/jetpack-mu-wpcom-plugin/moon/jetpack_vendor/automattic/jetpack-mu-wpcom/src/build/verbum-comments/verbum-commentsd91d.css?m=1777410324i&amp;cssminify=yes' type='text/css' media='all' />
+<link rel='stylesheet' id='verbum-gutenberg-css-css' href='../../../../../widgets.wp.com/verbum-block-editor/block-editor9d4e.css?ver=1771405207' media='all' />
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-12-1' href='../../../../_static/indexba1f.html??/wp-content/mu-plugins/comment-likes/css/comment-likes.css,/i/noticons/noticons.css?m=1436783281j&amp;cssminify=yes' type='text/css' media='all' />
+<link crossorigin='anonymous' rel='stylesheet' id='print-css-13-1' href='../../../../wp-content/themes/pub/varia/printa65f.css?m=1738187798i&amp;cssminify=yes' type='text/css' media='print' />
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-14-1' href='../../../../_static/index7a0d.html??-eJx9i0EKwjAQAD9kXIqHxIP4ljSs6ZYkG7Kblv7eihdF6W0GZmCtJnBRLAo6YUaB2keYcMEGolvCcxA5wf9s8Y08UAnv1Kw1cP4Zcjc19UhFoOGYOO4YYa8+9GiKyCZx8EpcvsQ8kqf2Wu/5NtiLG5y1Vzc/AZuuTtU=&amp;cssminify=yes' type='text/css' media='all' />
+<link rel='stylesheet' id='hever-fonts-css' href='https://fonts-api.wp.com/css?family=PT+Sans%3A400%2C400i%2C700%2C700i&amp;subset=latin%2Clatin-ext&amp;display=swap' media='all' />
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-16-1' href='../../../../wp-content/themes/pub/hever/stylea65f.css?m=1738187798i&amp;cssminify=yes' type='text/css' media='all' />
+<style id="jetpack-global-styles-frontend-style-inline-css">
+:root { --font-headings: unset; --font-base: unset; --font-headings-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; --font-base-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+/*# sourceURL=jetpack-global-styles-frontend-style-inline-css */
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-18-1' href='../../../../_static/indexfe6e.html??-eJyNjcEKAjEMRH/IGlcqPYmfIt20tF3TpJiWxb/XFS/ixcswD4Y3sDaDwj1yhzpMo5EKKyyxN4+3D0MV2SIMigqa/T0GH8LjXQunParu4H/TtTDCPAoFUMHiyZAk0S/4cfYc6+s9W0gks6dtcKnnyTl7stPh6JYnG8BLYw==&amp;cssminify=yes' type='text/css' media='all' />
+<script id="jetpack_related-posts-js-extra">
+var related_posts_js_options = {"post_heading":"h4"};
+//# sourceURL=jetpack_related-posts-js-extra
+</script>
+<script id="wpcom-actionbar-placeholder-js-extra">
+var actionbardata = {"siteID":"178169672","postID":"278","siteURL":"https://southernbaptistsabolishingabortion.com","xhrURL":"https://southernbaptistsabolishingabortion.com/wp-admin/admin-ajax.php","nonce":"f0a35f9f12","isLoggedIn":"","statusMessage":"","subsEmailDefault":"instantly","proxyScriptUrl":"https://s0.wp.com/wp-content/js/wpcom-proxy-request.js?m=1513050504i&amp;ver=20211021","shortlink":"https://wp.me/pc3A4o-4u","i18n":{"followedText":"New posts from this site will now appear in your \u003Ca href=\"https://wordpress.com/reader\"\u003EReader\u003C/a\u003E","foldBar":"Collapse this bar","unfoldBar":"Expand this bar","shortLinkCopied":"Shortlink copied to clipboard."}};
+//# sourceURL=wpcom-actionbar-placeholder-js-extra
+</script>
+<script id="jetpack-mu-wpcom-settings-js-before">
+var JETPACK_MU_WPCOM_SETTINGS = {"assetsUrl":"https://s1.wp.com/wp-content/mu-plugins/jetpack-mu-wpcom-plugin/moon/jetpack_vendor/automattic/jetpack-mu-wpcom/src/build/"};
+//# sourceURL=jetpack-mu-wpcom-settings-js-before
+</script>
+<script crossorigin='anonymous' type='text/javascript'  src='../../../../_static/index8545.html??/wp-content/mu-plugins/jetpack-plugin/moon/_inc/build/related-posts/related-posts.min.js,/wp-content/js/rlt-proxy.js?m=1755006225j'></script>
+<script id="rlt-proxy-js-after">
+	rltInitialize( {"token":null,"iframeOrigins":["https:\/\/widgets.wp.com"]} );
+//# sourceURL=rlt-proxy-js-after
+</script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://abolishingabortionsouthernbaptgmailcom.wordpress.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress.com" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='https://wp.me/pc3A4o-4u' />
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/?format=json&amp;url=https%3A%2F%2Fsouthernbaptistsabolishingabortion.com%2F2021%2F06%2F26%2Fheavy-hitting-sbc-abortion-abolition-resolution-authors-respond-to-sbc-academics%2F&amp;for=wpcom-auto-discovery" /><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/?format=xml&amp;url=https%3A%2F%2Fsouthernbaptistsabolishingabortion.com%2F2021%2F06%2F26%2Fheavy-hitting-sbc-abortion-abolition-resolution-authors-respond-to-sbc-academics%2F&amp;for=wpcom-auto-discovery" />
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Heavy-hitting SBC Abortion Abolition Resolution Authors Respond to SBC Academics" />
+<meta property="og:url" content="https://southernbaptistsabolishingabortion.com/2021/06/26/heavy-hitting-sbc-abortion-abolition-resolution-authors-respond-to-sbc-academics/" />
+<meta property="og:description" content="Image credit: baptistmessenger.com. Messengers raise ballots during a vote. Photo by Sam Evans On June 22nd, an article was published in Public Discourse, titled Why We Opposed an Anti-Abortion Res…" />
+<meta property="article:published_time" content="2021-06-27T01:35:14+00:00" />
+<meta property="article:modified_time" content="2021-06-30T04:13:15+00:00" />
+<meta property="og:site_name" content="Southern Baptists for Abolishing Abortion" />
+<meta property="og:image" content="https://southernbaptistsabolishingabortion.com/wp-content/uploads/2021/06/heavy-hitting-sbc-abortion-abolition-resolution-authors-respond-to-sbc-academics.png" />
+<meta property="og:image:width" content="1350" />
+<meta property="og:image:height" content="650" />
+<meta property="og:image:alt" content="" />
+<meta property="og:locale" content="en_US" />
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom" />
+<meta name="twitter:creator" content="@SBC_abolish" />
+<meta name="twitter:text:title" content="Heavy-hitting SBC Abortion Abolition Resolution Authors Respond to SBC&nbsp;Academics" />
+<meta name="twitter:image" content="https://southernbaptistsabolishingabortion.com/wp-content/uploads/2021/06/heavy-hitting-sbc-abortion-abolition-resolution-authors-respond-to-sbc-academics.png?w=640" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="search" type="application/opensearchdescription+xml" href="../../../../osd.xml" title="Southern Baptists for Abolishing Abortion" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+<link rel="pingback" href="../../../../xmlrpc.php"><meta name="description" content="Image credit: baptistmessenger.com. Messengers raise ballots during a vote. Photo by Sam Evans On June 22nd, an article was published in Public Discourse, titled Why We Opposed an Anti-Abortion Resolution at the Southern Baptist Convention (hereafter referred to simply as “the article” or “the SBC Academics&#039; critique”). The article bears the names of seven authors,&hellip;" />
+<link rel="icon" href="../../../../wp-content/uploads/2021/09/image76ca.jpg?w=32" sizes="32x32" />
+<link rel="icon" href="../../../../wp-content/uploads/2021/09/image9939.jpg?w=192" sizes="192x192" />
+<link rel="apple-touch-icon" href="../../../../wp-content/uploads/2021/09/imagead83.jpg?w=180" />
+<meta name="msapplication-TileImage" content="https://southernbaptistsabolishingabortion.com/wp-content/uploads/2021/09/image.jpg?w=270" />
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-0-5' href='../../../../_static/index3a37.html??-eJyNjMEKgzAQBX9IfdUKOZV+iuh2KdFkN7gJ+X0pVM8eZxgGNbWkklkyYmlTKF8vhpVzmmn7M6KqYPJCWILSZrDqE+8dmTW4f4j6KYENNO9ajMMVneI3fMdX75wb+8dzGNcDKPY7Zw==&amp;cssminify=yes' type='text/css' media='all' />
+
+</head>
+
+<body class="wp-singular post-template-default single single-post postid-278 single-format-standard wp-embed-responsive wp-theme-pubvaria wp-child-theme-pubhever customizer-styles-applied singular image-filters-enabled hide-homepage-title jetpack-reblog-enabled">
+
+
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	
+<header id="masthead" class="site-header responsive-max-width has-title-and-tagline has-menu" role="banner">
+	
+
+			<p class="site-title"><a href="../../../../index.html" rel="home">Southern Baptists for Abolishing Abortion</a></p>
+	
+		<nav id="site-navigation" class="main-navigation" aria-label="Main Navigation">
+
+		<input type="checkbox" role="button" aria-haspopup="true" id="toggle" class="hide-visually">
+		<label for="toggle" id="toggle-menu" class="button">
+			Menu			<span class="dropdown-icon open">+</span>
+			<span class="dropdown-icon close">&times;</span>
+			<span class="hide-visually expanded-text">expanded</span>
+			<span class="hide-visually collapsed-text">collapsed</span>
+		</label>
+
+		<div class="menu-primary-container"><ul id="menu-primary-1" class="main-menu" aria-label="submenu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-19"><a href="../../../../index.html">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="../../../../blog-2/index.html">Articles</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a href="../../../../about/index.html">Who are we?</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"><a href="../../../../contact/index.html">Contact</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-84"><a href="../../../../what-is-abolitionism/index.html">What is Abolitionism?</a></li>
+</ul></div>	</nav><!-- #site-navigation -->
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
+
+	<section id="primary" class="content-area">
+		<main id="main" class="site-main">
+
+			
+<article id="post-278" class="post-278 post type-post status-publish format-standard hentry category-uncategorized tag-critique tag-resolution tag-sbc entry">
+
+	<header class="entry-header responsive-max-width">
+		<h1 class="entry-title">Heavy-hitting SBC Abortion Abolition Resolution Authors Respond to SBC&nbsp;Academics</h1>				<div class="entry-meta">
+			<span class="byline"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Posted by</span><span class="author vcard"><a class="url fn n" href="../../../../author/abolishingabortionsouthernbaptgmailcom/index.html">Southern Baptists for Abolishing Abortion</a></span></span><span class="posted-on"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><path id="a" d="M0 0h24v24H0V0z"></path></defs><clipPath id="b"><use xlink:href="#a" overflow="visible"></use></clipPath><path clip-path="url(#b)" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"></path></svg><a href="index.html" rel="bookmark"><time class="entry-date published" datetime="2021-06-26T20:35:14-05:00">June 26, 2021</time><time class="updated" datetime="2021-06-29T23:13:15-05:00">June 29, 2021</time></a></span><span class="cat-links"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Posted in</span><a href="../../../../category/uncategorized/index.html" rel="category tag">Uncategorized</a></span><span class="tags-links"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Tags:</span><a href="../../../../tag/critique/index.html" rel="tag">Critique</a>, <a href="../../../../tag/resolution/index.html" rel="tag">Resolution</a>, <a href="../../../../tag/sbc/index.html" rel="tag">SBC</a></span>		</div><!-- .meta-info -->
+			</header>
+
+	
+	<div class="entry-content">
+		
+<figure class="wp-block-image size-large"><img data-attachment-id="280" data-permalink="https://southernbaptistsabolishingabortion.com/heavy-hitting-sbc-abortion-abolition-resolution-authors-respond-to-sbc-academics/" data-orig-file="https://southernbaptistsabolishingabortion.com/wp-content/uploads/2021/06/heavy-hitting-sbc-abortion-abolition-resolution-authors-respond-to-sbc-academics.png" data-orig-size="1350,650" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="heavy-hitting-sbc-abortion-abolition-resolution-authors-respond-to-sbc-academics" data-image-description="" data-image-caption="" data-large-file="https://southernbaptistsabolishingabortion.com/wp-content/uploads/2021/06/heavy-hitting-sbc-abortion-abolition-resolution-authors-respond-to-sbc-academics.png?w=750" width="1024" height="493" src="../../../../wp-content/uploads/2021/06/heavy-hitting-sbc-abortion-abolition-resolution-authors-respond-to-sbc-academics2dff.png?w=1024" alt="Messengers to the 2021 SBC annual meeting passed the Resolution to Abolish Abortion. Photo by Sam Evans" class="wp-image-280" srcset="https://southernbaptistsabolishingabortion.com/wp-content/uploads/2021/06/heavy-hitting-sbc-abortion-abolition-resolution-authors-respond-to-sbc-academics.png?w=1024 1024w, https://southernbaptistsabolishingabortion.com/wp-content/uploads/2021/06/heavy-hitting-sbc-abortion-abolition-resolution-authors-respond-to-sbc-academics.png?w=150 150w, https://southernbaptistsabolishingabortion.com/wp-content/uploads/2021/06/heavy-hitting-sbc-abortion-abolition-resolution-authors-respond-to-sbc-academics.png?w=300 300w, https://southernbaptistsabolishingabortion.com/wp-content/uploads/2021/06/heavy-hitting-sbc-abortion-abolition-resolution-authors-respond-to-sbc-academics.png?w=768 768w, https://southernbaptistsabolishingabortion.com/wp-content/uploads/2021/06/heavy-hitting-sbc-abortion-abolition-resolution-authors-respond-to-sbc-academics.png 1350w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption>Image credit: <a href="https://www.baptistmessenger.com/sbc-in-nashville-momentous-2021-meeting-in-music-city/">baptistmessenger.com</a>. Messengers raise ballots during a vote. Photo by Sam Evans</figcaption></figure>
+
+
+
+<p class="wp-block-paragraph">On June 22nd, an article was published in Public Discourse, titled <em><a href="https://www.thepublicdiscourse.com/2021/06/76465/?fbclid=IwAR2TlBuSw3Przt_48tszyphHCM58pEUTZS7u8w28Gb1aCrVnOAt1koPl4hk">Why We Opposed an Anti-Abortion Resolution at the Southern Baptist Convention</a></em> (hereafter referred to simply as “the article” or “the SBC Academics&#8217; critique”). The article bears the names of seven authors, who are all academics in the Southern Baptist Convention and one former president of the Ethics and Religious Liberty Commission (ERLC). The resolution in question is the Resolution on Abolishing Abortion (Resolution), which was passed during the Southern Baptist Convention (SBC) Annual Meeting in Nashville, TN June 15-16. This article is a response to the SBC Academics&#8217; critique of the Resolution. We want to be clear that though these men have leveled serious critiques against our resolution that we believe are terribly mistaken, we believe that these men are motivated by a desire to honor God and save babies from the slaughter. We intend to honor and obey Christ in our response. We are thankful for the opportunity to do so.</p>
+
+
+
+<h2 class="wp-block-heading">The SBC Resolution on Abolishing Abortion</h2>
+
+
+
+<p class="wp-block-paragraph">We are the party responsible for introducing the Resolution to the messengers at the 2021 SBC annual meeting. The goal of the Resolution, which we encourage you to read in full <a href="../../../../index.html">here</a>, is to present and promote faithful obedience to God’s will in Scripture concerning the horrific holocaust our country is waging against God’s image-bearers, our most vulnerable, preborn neighbors. We believe you will find the Resolution is both well-supported by Scripture and reflective of many established, fundamentally biblical principles on which all faithful Christians would agree.</p>
+
+
+
+<p class="wp-block-paragraph">The question behind the Resolution is: How does God, through His Word, command the Bride of Christ to address and combat the great evil of the unjustified, premeditated murder of preborn humans in our society? The abortion abolitionist’s answer is: cease murdering the preborn immediately without any compromise to the culture of death.</p>
+
+
+
+<h2 class="wp-block-heading">Passage of the Resolution on Abolishing Abortion&nbsp;</h2>
+
+
+
+<p class="wp-block-paragraph">We praise God for His providence in the introduction and adoption of the Resolution at the 2021 annual meeting. Contrary to one specious claim of the SBC Academics&#8217; critique (suggesting that members of the convention may not have had enough time to consider the Resolution, and would have rejected it if they had), we believe God established “the work of our hands” (Psa 90:17) to ensure that many people had an opportunity to read and become familiar with the Resolution before voting on it. Among many other efforts, over 5,500 printed copies of the Resolution were distributed by hand at SBC-related event booths and on the streets in the days preceding the vote. A social media campaign began weeks before the annual meeting, and our website has been live for over a year. We believe that passage of the resolution is reflective of a plurality of Christians coming together in faithful obedience to God’s Word. We give thanks to God for His grace and mercy in guiding the hearts of so many Christian pastors, leaders, and brothers and sisters to be faithful to His Word in the face of a culture that hates God, His commands, and all those who obey Him, and will stop at nothing to protect the destruction of God’s image-bearers.</p>
+
+
+
+<h2 class="wp-block-heading">Disobedience and Dishonesty</h2>
+
+
+
+<p class="wp-block-paragraph">Although the SBC Academics&#8217; critique described the Resolution as “woefully flawed,” we nevertheless believe that demanding the total and immediate abolition of abortion to be the only consistent, biblically defensible stance on abortion. We are humbly confident that God’s revealed will in Scripture is faithfully reproduced within the Resolution. The fact is, there are non-biblical stumbling blocks and fatal flaws in the professional pro-life movement. These errors in thinking, tragically, prolong not only the abortion debate but the actual slaughter of our preborn neighbors. For 48 years, we have not succeeded in eradicating this pagan practice from our land. We have failed to achieve even one substantial victory in pushing back the Roe decision. We are disappointed to discover that the SBC Academics, too, have subscribed to two of the most basic and common errors in their critique of our Resolution: </p>
+
+
+
+<p class="wp-block-paragraph"><em>“</em>[The Resolution]<em> contains two serious flaws that made it impossible for us to support it: (1) it rejects incrementalism and (2) it embraces the abolition of abortion with no exception for the life of the mother.”</em>&nbsp;</p>
+
+
+
+<p class="wp-block-paragraph">We are not surprised by this critique. These are possibly two of the most frequently cited stumbling blocks for the modern pro-life movement’s adoption of biblical abolitionism. The first criticism calls for flagrant, sinful, disobedience to God, and the second is a dishonest conflation of terms, used to set up a straw man argument against those who promote complete obedience to God.</p>
+
+
+
+<h2 class="wp-block-heading">On the Authors and Their Critique</h2>
+
+
+
+<p class="wp-block-paragraph">The SBC Academics who authored the Public Discourse article combine to form a veritable army of heavy hitting credentials: Professor of Biblical Studies; Professor of Christian Ethics; Associate Professor of Christian Ethics and Apologetics; Professor of Philosophy and Ethics; Senior Professor of Christian Ethics; Professor of Moral Philosophy (ret.); and, Professor of Ethics. They represent years of hard study and, surely, desire to see not only babies saved, but the Lordship of Jesus Christ over all matters. These men are neither lightweights in the study, nor idle in their efforts. There is much for which to be thankful in their lives and work. We honestly commend them.</p>
+
+
+
+<p class="wp-block-paragraph">With such an impressive array of biblical scholars behind the article, we were looking forward to a critique bringing the full weight of God’s Word to bear upon the Resolution, one that mounted potent and persuasive biblical arguments regarding the perceived flaw(s) in the abolitionist argument, and provided serious food for consideration and prayer. We were ready for iron to sharpen iron (Prov 27:17). We should be men and women who rejoice and delight in God’s judgments and statutes (Psalm 119:13-16), who understand that the way of truth abides in God’s judgments (v. 30), who know that the wisdom and understanding needed to judge rightly comes through God’s Law (vv. 34, 73, 98-100, 104), who will testify to God’s Law before the civil magistrate (v. 46) because we love His Law (v. 47), and understand that God’s Word is forever the ultimate standard of appeal in all spheres of life (vv. 89-91, 111, 112, 128). </p>
+
+
+
+<p class="wp-block-paragraph">Lamentably, the SBC Academics&#8217; critique calls upon a total of only two Scriptures, with only one of them intended as an argument against the Resolution. Ironically, the lengthiest Scripture in the critique is from a single clause of the Resolution in which we reference twice as much Scripture as the entire SBC Academics&#8217; article. We must point out that their critique is addressing a sixth commandment issue: the question of how righteously to apply God’s commandment—“You shall not murder” (Exo 20:13; Deut 5:17)—to God’s preborn people. How can it be that there was virtually no appeal to God’s Word? We think that God’s thoughts are the most important and most useful resource for properly addressing this great evil, and we are shocked and saddened at the conspicuous lack of Scripture.&nbsp;</p>
+
+
+
+<p class="wp-block-paragraph">One of the most common difficulties we abolitionist pastors face when seeking to persuade the professional pro-life industry and legislators trained by them is the consistent appeals to some authority other than God’s Word. Is not God’s Word both <em>sufficient</em> for “all things that pertain to life and godliness” (2 Pet 1:30), and <em>authoritative</em> “to destroy arguments and every lofty opinion raised against the knowledge of God, and take every thought captive to obey Christ” (2 Cor 10:5)? Jesus said that when salt loses its flavor, it is good for nothing, except to be thrown out and trampled underfoot by men (Matt 5:13). We fear that the SBC Academics&#8217; critique is yet another example of getting caught up in the flavorless rhetoric of the professional pro-life industry, and not being captive to Christ.&nbsp;&nbsp;</p>
+
+
+
+<h2 class="wp-block-heading">SBC Academics&#8217; First Criticism: Exceptions for the Mother’s Life</h2>
+
+
+
+<p class="wp-block-paragraph">The first of our two “flaws,” according to the SBC Academics&#8217; critique, is the claim that the Resolution <em>“[Rejects] an Exception for the Life of the Mother.”</em> This straw man argument is standard pro-life industry rhetoric implying that the Resolution is hostile to the life of pregnant mothers. The SBC Academics mount their specious argument in three ways:</p>
+
+
+
+<ol class="wp-block-list"><li>By borrowing the pro-choice camp’s dishonest arguments (surely unintentionally) regarding ectopic pregnancies;</li><li>By introducing and doubling-down on the conflated use of the term “abortion;” and,</li><li>By claiming that the Resolution is proactively hostile to the life of pregnant women.</li></ol>
+
+
+
+<h3 class="wp-block-heading">Argument One: Ectopic Pregnancies</h3>
+
+
+
+<p class="wp-block-paragraph">A favorite strategy of the pro-choice camp is to dishonesty frame ectopic pregnancies (EPs) as an abortion-related issue. They argue that <strong>all</strong> EPs inevitably result in the death of the mother and the child. They call this a scientific certainty and, based upon this first misrepresentation of truth, claim that abortive procedures must be available at least to mothers believed to have an EP (but actually to everyone, really). This is a good example of attempting to make a rule based on the exception, and we see this identical form of reasoning in other areas of leftist humanistic thought, especially in the LGBT agenda. </p>
+
+
+
+<p class="wp-block-paragraph">Ectopic pregnancies are treated surgically, medically, or with expectant management. Studies show <a href="https://www.ajog.org/article/ S0002-9378(14)00271-3/abstract">from 40%</a> to <a href="https://www.aafp.org/afp/ 2000/0215/p1080.html#afp20000215p1080-f3">68-77%</a> can spontaneously resolve without any treatment. There have been at least two documented cases in which physicians successfully transferred the ectopic embryo to the uterus, <a href="https://epublications.marquette.edu/cgi/ viewcontent.cgi?article=2010&amp;context=lnq">Dr. C.J. Wallace in 1917</a>, and <a href="https://isidore.co/misc/Physics papers and books/Zotero/ storage/XNZFJ79G/Shettles - 1990 -  Tubal embryo successfully transferred in utero.pdf">Dr. Landon B. Shettles in 1980</a>. While two cases are anecdotal, there has been no real effort to evaluate this transfer option further. If we valued maternal and embryonic life as equal, we would demand that this be researched and attempted. We look forward to God’s blessing in medical and scientific innovation to advance legitimate methods for healing EPs, such as <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2552973/pdf/jnma00062-0019.pdf">reimplantation</a>.</p>
+
+
+
+<p class="wp-block-paragraph">Removal of an ectopic is not considered an abortion. It is coded differently in the ICD 10. It is explicitly noted in many state laws that removal of an ectopic is not an abortion (Texas, Mississippi, Alabama). While many in the secularized medical community (even Christians, unwittingly) echo these pro-choice deceptions, the fact is, <a href="https://pubmed.ncbi.nlm.nih.gov/3294090/">not all ectopic pregnancies</a> must necessarily result in the death of the mother, the child, or both. Though we acknowledge EPs are commonly fatal and very dangerous to mother and child, we deny any arguments based on the lie that death in such cases is a scientific certainty. There is no condition in pregnancy that requires the killing of the baby to save the life of the mother. If a mother has a medical condition worsened by pregnancy, the treatment is simply to induce labor or do a c-section at the point where the risk to the mother and the viability of the baby is felt to intersect.</p>
+
+
+
+<p class="wp-block-paragraph">A physician has a duty to first do no harm. The same medical care and practices, and a reliance on the providence of God, must be applied to the case of EPs as is already applied in the case of all other dangerous health complications, such as those which routinely occur in the case of extreme old age, or as is applied in the case of very aggressive diseases. This is another way of saying that we are against the practice of euthanasia, including when applied abortively to preborn children.&nbsp;</p>
+
+
+
+<p class="wp-block-paragraph">When pro-life bills leave a general exception for the life of the mother or any other loophole, it will be abused. Abolition bills would close abortion facilities and criminalize the premeditated murder of the preborn, not leaving any room for abortion-intending physicians to use the general life of the mother exception as a wide enough loophole to legally justify preborn murder. In reality, an exception for ectopic pregnancies to be treated and given the full range of care is not necessary. Our current homicide laws already sort out these situations to serve justice for the victim and punishment for the criminal. Most doctors are already bound to operate under the Hippocratic Oath and are daily making these these types of professional decisions when treating multiple patients at once and triaging. Under true healthcare, the doctor’s intent is not to take a life, but rather to preserve all the lives he can. Under current law, the doctor is not criminalized in such situations, nor would he be if an abolitionist bill were passed into law.</p>
+
+
+
+<p class="wp-block-paragraph">Even still, for the sake of biblical, moral, and legal clarity, abolition bills have intentionally included language that applies specifically to ectopic pregnancy events. As one example, <a rel="noreferrer noopener" href="https://legiscan.com/OK/text/SB495/id/2247284" target="_blank">Senate Bill 495</a> in Oklahoma twice reads, “The provisions of this subsection shall not be construed to apply to cases in which a physician licensed to practice medicine in this state attempts, in a reasonably prudent manner, to prevent the death of an unborn person or a pregnant woman.”</p>
+
+
+
+<p class="wp-block-paragraph">As Christians, we are compelled by God to take such a view of EPs because “God shows no partiality” to persons (Rom 2:11), nor does He allow any partiality in justice between the weak and the strong (Exo 23:3; Lev 19:15), so we may not adopt alternative or exceptional forms of medical care for the preborn. And let us be honest about the pro-choice argument here: they do not truly care for the life of the mother. Their true intent is to prey upon mothers by taking a terrible situation and using it to further the abortion agenda. We must not submit to their use of the word “abortion” as our authority.</p>
+
+
+
+<p class="wp-block-paragraph">Teaching parents that the only solution to EPs is to murder their preborn child as soon as possible is necessarily going to stifle medical research and advancement of other life-saving treatments. Furthermore, framing EPs in terms of abortion places a terrible (and false) moral burden upon parents who are in the already unfortunate situation of having to make difficult choices regarding appropriate medical care. Sadly, too often, the professional pro-life industry takes some of its talking points from the pro-choice “experts” who are far too welcoming of any “exceptions” allowing them justification for their abortuaries remaining open and their murders not being criminalized.</p>
+
+
+
+<h3 class="wp-block-heading">Argument Two: Conflating “Abortion”</h3>
+
+
+
+<p class="wp-block-paragraph">The medical procedure associated with the term “abortion,” the procedure which the pro-choice camp is fighting for, is Dilation and Evacuation or Curettage, the removal of a fetus and placenta from the uterus. In cultural and practical terms, surgical abortion means “dilation and evacuation,” which has nothing to do with the medical procedures used to address ectopic pregnancies (salpingostomy, salpingectomy, and laparotomy). On the one side, many in the pro-choice camp are proactively and intentionally furthering the confusion of these two issues (because it furthers the pro-choice agenda to do so). On the other side, whether knowingly or not, many in the professional pro-life industry, and the authors critiquing our resolution, are actively promoting the continued use of imprecisely defined language. This is a confusing conflation of terms:</p>
+
+
+
+<p class="wp-block-paragraph"><em>“The word “abortion” can be morally freighted in a way that suggests intent to kill an unborn human life. Nevertheless, there is a history in SBC resolutions of using the term “abortion” generically. In this usage, an “abortion” is any action that results in the destruction of unborn human life at any stage of development regardless of intent (see</em><a href="https://www.ahdictionary.com/word/search.html?q=abortion"><em> </em><em>American Heritage Dictionary</em></a><em>, “any of various procedures that result in the termination of a pregnancy”). This usage is a little like employing the term “abortifacient” regardless of intent.”</em></p>
+
+
+
+<p class="wp-block-paragraph">Unlike others, we are not willing to allow culture to define terms however they please, and we will continue to advocate against improperly applying terms like “abortion” to difficult situations like EPs. Regardless, we are constrained by God to deny any practices of euthanasia for God’s image-bearers, regardless of what terms are used for the practice (abortion, abortifacient, etc.). </p>
+
+
+
+<h3 class="wp-block-heading">Argument Three: Hostility of the Resolution</h3>
+
+
+
+<p class="wp-block-paragraph">The critique’s authors, from the very beginning of their argument, characterized the Resolution in terms of lacking compassion for the life of the mother. They argue, “this resolution would prohibit the attempt to save the life of the mother” merely because it did not include verbiage regarding EPs. At best, this fallacious argument is a smokescreen that must be rejected on its face. There is no issue of hostility towards mothers on the part of the Resolution, rather, the authors of the resolution do not give ground to the fallacious presuppositions which lay at the heart of the pro-abortion (and pro-life) industry’s “life of the mother” exceptions. As discussed above, the authors of the resolution are not submitting to the standpoint epistemology of the pro-abortion industry, but instead, submit to God’s Word.</p>
+
+
+
+<p class="wp-block-paragraph">We welcome the company, should any in the pro-life industry want to join us.&nbsp;</p>
+
+
+
+<p class="wp-block-paragraph">As Christians who support obedience to God’s Word, we do not consider it necessary to “state the obvious” by going out of the way to include additional language specifically addressing EPs. Because the Resolution was affirmed by the messengers and passed without additional language regarding EPs, it would seem that many Southern Baptists agree that overt inclusion exceptions were not necessary. Nonetheless, after hearing critiques at the SBC, the authors were willing to add the following language to the resolution:</p>
+
+
+
+<p class="wp-block-paragraph"><em>(14) “RESOLVED, that we recognize that ectopic pregnancies are a tragedy during which medical triage is necessary with doctors never ceasing to treat both mother and baby as human beings, and upholding the Hippocratic Oath by exhausting all possible options to save as many human lives as they can&#8221;&nbsp;</em></p>
+
+
+
+<p class="wp-block-paragraph">However, the authors did not have a chance to include this additional language, nor did the convention find it necessary in the end (as was already noted). Nonetheless, we are glad that the SBC Academics&#8217; critique has provided us with this opportunity to address the delusive presentation of ectopic pregnancies, which is common to the pro-choice (and, pro-life) movement, and we hope our SBC academic brothers have found it to be instructive.</p>
+
+
+
+<h2 class="wp-block-heading">SBC Academics&#8217; Second Criticism: The Rejection of Incrementalism</h2>
+
+
+
+<p class="wp-block-paragraph">The SBC Academics&#8217; critique identifies the rejection of incrementalism as a major defect of the Resolution. Far from a defect, this issue is actually a “feature” of the resolution. The Resolution does reject incrementalism, which is a sinful contrivance birthed from the deceitful heart of man, in place of full obedience to God’s Word.</p>
+
+
+
+<ol class="wp-block-list"><li>God possesses the authority to, and does indeed, require full obedience from all His creatures at all times (Psa 37:23; 128:1; Mic 2; John 14:23; Acts 10:34-35; Jam 1:22).</li><li>Christ has been given all authority in heaven and on earth (Dan 4:35; Matt 28:18-20).</li><li>Christ commanded His people to disciple the nations, teaching them to obey everything He commanded (Matt 28:18-20; 2 Cor 10:3-6; Phil 2:11).</li><li>Christians may not advocate for anything less than complete obedience (Matt 12:25, 30).</li><li>Definitionally, anything other than complete obedience is disobedience (Num 15:39; Deut 4:2, 40; 5:29; 6:17; 8:6; Josh 1:8; 24:15; Matt 5:19; 7:21; Luke 10:27).</li><li>God will not bless willful disobedience because He hates sin (Lev 26; Deut 28; 1 Kings 2:3; Psa 5:5; Prov 6:16-19; Rom 1:18-19).&nbsp;</li><li>God commands the civil magistrate to be a minister for good and a terror to evil, <em>as He defines good and evil </em>(Rom 13:1-4).</li><li>God’s Word provides us with everything we need to know to live righteously (2 Tim 3:16-17).</li></ol>
+
+
+
+<p class="wp-block-paragraph">The arguments in favor of incrementalism find no basis in Scripture and fail to recognize the complete Lordship of Jesus Christ. Here are common incrementalist excuses for why they fail to advocate for full and complete obedience to God:</p>
+
+
+
+<ol class="wp-block-list"><li><em>“It’s unrealistic to expect the civil government to completely ban abortion.”</em></li></ol>
+
+
+
+<p class="wp-block-paragraph">Crystal ball theology is when Christians speculatively look into the future and then use their speculative divinations to justify something other than complete obedience to God in the present. The story of the Israelite spies is a classic biblical example of this kind of “christian” living, and the judgment which it brings (Num 13:1-33; Deut 1:22-40). The fact is that the future belongs to God, and the responsibility of Christians goes no further than their present obedience. Scripture is replete with examples of the saints practicing seemingly impossible obedience, which God blesses in the outcome. Making excuses for full obedience is a lack of faith, which God will punish accordingly<em>.</em></p>
+
+
+
+<p class="has-text-align-left wp-block-paragraph"><em>      2. “We can save more lives through incrementalism, because if we are willing to compromise, then less children will be murdered.”</em></p>
+
+
+
+<p class="wp-block-paragraph">First, this is a reversal of biblical cause and effect; it is backward. It is wrong to believe a lack of obedience will lead to a better outcome. For example, had the Christian community as a whole stood up against Roe V. Wade in the beginning, advocating for nothing less than complete obedience, we would not be 65 million dead humans into this plague. Satan’s lie is that we will save more by capitulating to sin, but this is a long-con which only works among the short-sighted. In the long term, disobedience to God always results in His judgment; in the case of abortion, God’s judgment on our lack of obedience is enormous. Christians must acknowledge God’s principle of cause and effect: blessings for obedience, curses for disobedience (Gen 4:7; Deut 28; Eccl 8:12-13; Isa 3:10-11; Rom 2:6-11; Eph 6:1-3).</p>
+
+
+
+<p class="wp-block-paragraph">Second, Christians must not forget that man was created to glorify God, the foremost component of which is obedience (1 Cor 10:31; Rom 11:36; 1 Pet 2:12; 4:11). This will sound harsh to the unbeliever, and they doubtlessly will have a field day with it, but Christianity is not a politically correct religion: stated bluntly, it is better to be obedient to God than for man to live. Jesus is clear on this point, “whoever would save his life will lose it” (Matt 16:25; cf 5:29).</p>
+
+
+
+<p class="wp-block-paragraph">Third, the incrementalist line of reasoning capitulates to Satan&#8217;s most common lie. “Did God really say you always have to obey Him? There could be valid excuses to disobey.” Accordingly, the incrementalist will claim that less than complete obedience to God is not sinful in the case where he speculates that fewer lives will be lost. For the Christian to adopt such a belief amounts to the idolatry of erecting the life of man over and above obedience to God.</p>
+
+
+
+<ol class="wp-block-list" start="3"><li>Specifically, in the SBC Academics&#8217; critique, they quoted Proverbs 24:10-11 as justification for incrementalism:</li></ol>
+
+
+
+<p class="wp-block-paragraph"><em>“If you faint in the day of adversity, Your strength is small. Deliver those who are drawn toward death, And hold back those stumbling to the slaughter.”</em></p>
+
+
+
+<p class="wp-block-paragraph">The SBC Academics&#8217; misapplication of this Scripture is reminiscent of the time Satan tempted Jesus through the misapplication of Scripture:</p>
+
+
+
+<p class="wp-block-paragraph"><em>Then the devil took Him to the holy city and set Him on the pinnacle of the temple and said to Him, “If you are the Son of God, throw yourself down, for it is written, ‘He will command his angels concerning you,’ and ‘On their hands they will bear you up, lest you strike your foot against a stone.’” Jesus said to him, “Again it is written, ‘You shall not put the Lord your God to the test’” (Matt 4:5-7).</em></p>
+
+
+
+<p class="wp-block-paragraph">Essentially, the SBC Academics assert that incrementalism is acceptable because, despite the overwhelming testimony of Scripture where God commands man to be obedient to Him in all things, Proverbs 24:10-11 provides permissible exceptions for disobedience so long as you are saving human lives. We are not shocked that the reader will find this support of murdering some and using Scripture for those ends unconscionable. God hates perverted justice and partiality (Deut 16:19).</p>
+
+
+
+<p class="wp-block-paragraph">Again, to the SBC Academics&#8217; we say, in Scripture, it is written:</p>
+
+
+
+<p class="wp-block-paragraph"><em>Say to the people of Israel, Any one of the people of Israel or of the strangers who sojourn in Israel who gives any of his children to Molech shall surely be put to death. The people of the land shall stone him with stones. I myself will set my face against that man and will cut him off from among his people, because he has given one of his children to Molech, to make my sanctuary unclean and to profane my holy name. And if the people of the land do at all close their eyes to that man when he gives one of his children to Molech, and do not put him to death, then I will set my face against that man and against his clan and will cut them off from among their people, him and all who follow him in whoring after Molech (Lev 20:2-5).</em></p>
+
+
+
+<p class="wp-block-paragraph">We pray that God would bless the SBC Academics&#8217; by removing this deception before their eyes, and granting repentance so that they may properly orient the protection of life upon the firm foundation of complete obedience to Christ.&nbsp;</p>
+
+
+
+<p class="wp-block-paragraph">The simple truth of God’s Word is that incrementalism is first, a heinous sin against God, and second, delays the abolition of abortion, leading to far more lives lost than ought to have been the case.</p>
+
+
+
+<h3 class="wp-block-heading">Testing Incrementalism Elsewhere</h3>
+
+
+
+<p class="wp-block-paragraph">Incrementalism is only a seemingly tenable belief and practice when it is exercised in situations where we have already given up, or where the wickedness of the culture has made the depravity of the sin more palatable (as in the case of abortion). But as soon as you apply incrementalism to another issue, one where our worldview hasn’t already been compromised, its ridiculousness quickly becomes self-evident.&nbsp;</p>
+
+
+
+<p class="wp-block-paragraph">A good example is the 2021 <a href="https://www.sbc.net/resource-library/resolutions/on-the-uyghur-genocide/">SBC resolution On The Uyghur Genocide</a>. From the resolution:</p>
+
+
+
+<p class="wp-block-paragraph"><em>“RESOLVED, That we call upon the Chinese Communist Party and the People’s Republic of China to </em><strong><em>cease its program of genocide against the Uyghur people immediately,</em></strong><em> restore to them their full God-given rights, and put an end to their captivity and systematic persecution and abuse.”</em></p>
+
+
+
+<p class="wp-block-paragraph">How preposterous would it have been for someone to try to amend the resolution to call for the gradual end of the Uyghur genocide? Just as we advocate for the immediate ceasing of genocide in China, so must we also advocate for the immediate ceasing of the genocide in America. When compared with the SBC resolution on the Uyghur genocide, the SBC Academics’ critique reveals (surely unintended) humanistic presuppositional thinking. How else do you explain such inconsistent treatment of the SBC Resolution on the American genocide? There is no room for intellectual inconsistency, especially regarding matters of life and death.</p>
+
+
+
+<h2 class="wp-block-heading">General Thoughts on the SBC Academics&#8217; Critique</h2>
+
+
+
+<p class="wp-block-paragraph">In addition to addressing the two main complaints raised by our critics, we feel it necessary to address other issues of note in what follows.</p>
+
+
+
+<h3 class="wp-block-heading">Ethical Pragmatism vs. Biblical Ethics</h3>
+
+
+
+<p class="wp-block-paragraph">The critique issued against our Resolution, quite frankly, was an example of moral pragmatism. Moral pragmatism is the practice of using pragmatic arguments (which are necessarily subjective and of little value, due to the limitations of human knowledge, reasoning, and man’s ability to see into the future) as a tool for arriving at moral truth. The moral pragmatist claims to arrive at valid moral rules based upon his power to reason from action to outcome, according to his supposed ability to “divine” into the future. </p>
+
+
+
+<p class="wp-block-paragraph">We see the beginning of the pragmatic reasoning in the SBC Academics’ claim about their problems with the Resolution. They assert the validity of their moral argument against the Resolution based upon their subjective speculation about the supposed future effect of the Resolution.</p>
+
+
+
+<ol class="wp-block-list"><li><strong>If</strong> the Resolution is carried out in public,</li><li><strong>Then</strong> more people will die,</li><li><strong>Therefore,</strong> the Resolution is immoral.</li></ol>
+
+
+
+<p class="wp-block-paragraph">We already covered a similarly pragmatic view of morality, in addressing their incremental argument that justified disobedience to God.&nbsp;</p>
+
+
+
+<ol class="wp-block-list"><li><strong>If</strong> we do not compromise with the pagan on abortion,</li><li><strong>Then</strong> more children will die,</li><li><strong>Therefore,</strong> incrementalism is moral.</li></ol>
+
+
+
+<p class="wp-block-paragraph">For the moral pragmatist, his speculation about the future consequences of today’s actions provides allowance and compromise in all other considerations, including God’s commandments.</p>
+
+
+
+<p class="wp-block-paragraph">In stark contrast, God commands Christians to arrive at moral truth through an entirely different method: the application of His Law as revealed in Scripture (Lev 22:31; Deut 4:13; 6:17; 8:6; 13:4; Josh 22:5; 2 Cor 7:1; 1 Thes 4:7; Heb 12:14; 1 Pet 1:15-16; 1 John 3:3). God further promises that when we are faithful to keep His Law He will bless us with positive pragmatic outcomes:</p>
+
+
+
+<p class="wp-block-paragraph"><em>And if you faithfully obey the voice of the LORD your God, being careful to do all his commandments that I command you today, the LORD your God will set you high above all the nations of the earth. </em><strong><em>And all these blessings shall come upon you and overtake you, if you obey the voice of the LORD your God</em></strong><em> (Deut 28:1-2).</em></p>
+
+
+
+<p class="wp-block-paragraph"><em>If you obey the commandments of the LORD your God that I command you today, by loving the LORD your God, by walking in his ways, and by keeping his commandments and his statutes and his rules, </em><strong><em>then you shall live and multiply, and the LORD your God will bless you in the land that you are entering to take possession of it</em></strong><em> (Deut 30:16).</em></p>
+
+
+
+<p class="wp-block-paragraph"><em>This Book of the Law shall not depart from your mouth, but you shall meditate on it day and night, so that you may be careful to do according to all that is written in it. </em><strong><em>For then you will make your way prosperous, and then you will have good success</em></strong><em> (Josh 1:8).</em></p>
+
+
+
+<p class="wp-block-paragraph">And finally, Jesus teaches us the only way we can truly love our neighbor (including our preborn neighbors) is by being obedient to His Law:</p>
+
+
+
+<p class="wp-block-paragraph"><em>But when the Pharisees heard that he had silenced the Sadducees, they gathered together. And one of them, a lawyer, asked him a question to test him. “Teacher, which is the great commandment in the Law?” And he said to him, “You shall love the Lord your God with all your heart and with all your soul and with all your mind. This is the great and first commandment. And a second is like it: You shall love your neighbor as yourself. On these two commandments depend all the Law and the Prophets” (Matt 22:34-40).</em></p>
+
+
+
+<p class="wp-block-paragraph">In contrast to any arguments presented within the SBC Academics&#8217; article, our Resolution promotes the only way God provides by which we truly can love our most vulnerable neighbors, and their mothers: obediently applying God’s Word in our culture, teaching them to obey everything Jesus commanded (Matt 28:18-20). God promises His blessing upon our obedience, for which reason we can scripturally conclude that if the Resolution is carried out in public, then it will result in the most innocent lives being saved. All methods for loving our neighbor which reject God’s Word, in part or whole, are Satan’s lie. Thus, the biblical structure for morality goes as follows:</p>
+
+
+
+<ol class="wp-block-list"><li>God authoritatively dictates moral principles and application, which are timeless and independent of man’s social or cultural state of development.</li><li>Man fervently pursues God’s moral principles, learning from Scripture how to apply them to his present state of social and cultural development.</li><li>God blesses man for obedience or curses man for disobedience.</li></ol>
+
+
+
+<p class="wp-block-paragraph">As we see, biblical ethics has an entirely different structure than moral pragmatism. The Christian is constantly seeking to conform his life and circumstances to God’s moral principles, working out the implications of the gospel whereas the moral pragmatist is constantly seeking to reshape morality to fit his life and circumstances. According to God’s moral economy, the total abolition of abortion is the only course of action that can yield God’s blessing.</p>
+
+
+
+<h3 class="wp-block-heading">The Resolution Was Not Read at the SBC</h3>
+
+
+
+<p class="wp-block-paragraph">Earlier we briefly noted the SBC Academics&#8217; comment on the short amount of time people have to review resolutions and their suggestion that the Resolution may have only passed due to ignorance. To quote:&nbsp;</p>
+
+
+
+<p class="wp-block-paragraph"><em>“One of the difficult things about the Resolutions process at the annual meeting of the Southern Baptist Convention (SBC) is that the messengers, who represent cooperating churches, are often given far too little time to consider complicated resolutions. We think</em><a href="https://baptistnews.com/article/sbc-calls-for-immediate-abolition-of-abortion-without-exception-or-compromise/#.YMzn4qEpCGQ"><em> </em><em>something</em></a><em> like that might have happened at our most recent meeting.”</em></p>
+
+
+
+<p class="wp-block-paragraph">Such a claim is hardly useful because the same argument can be applied with equal validity to every resolution passed at the convection; the SBC Academics are effectively kicking the legs out from underneath the entire convention. Do you think they will be willing to apply the same standard to all the resolutions passed by the SBC, including those which they support? We shall see.</p>
+
+
+
+<h3 class="wp-block-heading">The <strong>Southern</strong> <strong>Baptist</strong> Pro-Life Legacy</h3>
+
+
+
+<p class="wp-block-paragraph">The SBC Academics next claim, in a statement of self-defense, that the SBC has not diminished any of its resolve to defend the sanctity of human life:</p>
+
+
+
+<p class="wp-block-paragraph"><em>“Southern Baptists have not at all diminished in their resolve to ‘contend for the sanctity of all human life from conception to natural death,’ and we have declared that resolve time and time again over the years.”</em></p>
+
+
+
+<p class="wp-block-paragraph">They claim, therefore, that passage of resolutions such as the Resolution is redundant.&nbsp;</p>
+
+
+
+<p class="wp-block-paragraph">We acknowledge and are thankful for the historicity of the Southern Baptist campaign against abortion. However, the SBC’s historical resolve is compatible with incrementalism, and an incremental (i.e., regulatory) approach to addressing abortion has long existed implicitly among many Southern Baptists. Following the annual meeting and with the SBC Academics’ critique of our Resolution, incrementalism is now explicitly very much supported. It is this very issue (among others) which the Resolution contends against and accurately addresses in terms of God’s revealed will. The SBC Academics and the SBC cannot claim to have a <em>biblical </em>resolve to contend for the sanctity of human life while also espousing an incremental approach to eventual (i.e., not currently, nor ever) obedience to God. The purpose of the Resolution is to unite Southern Baptists in uncompromising obedience to God’s Word, looking forward in faith to the blessings God promises with our obedience.</p>
+
+
+
+<h2 class="wp-block-heading">Conclusion</h2>
+
+
+
+<p class="wp-block-paragraph">We believe that the passage of the Resolution during the 2021 SBC was no mistake. We believe it was read and received positively, and subsequently adopted, because many godly men and women of the convention recognize the truthful representation of God’s will contained within the Resolution, as well as recognizing the stagnation, timidity, and sinful compromising of the mainstream, professional pro-life industry. We deny the SBC Academics&#8217; repudiation of the Resolution based on the mother’s life exception because they misrepresent the issue of ectopic pregnancies and participate in the pro-life industry’s practice of conflating terms. We further deny the SBC Academics&#8217; repudiation of the Resolution based on their pro-incrementalism stance, because incrementalism is incompatible with true Christianity. For our part, we were disappointed in the SBC Academics&#8217; critique because it was extraordinarily lacking in the application of God’s Word, relying primarily on the testimony of other men. We hope that the authors will take time to reconsider their position and provide a thorough defense in terms of God’s Word. We give thanks to God for His providence toward us in guiding the way for the adoption of the Resolution on Abolishing Abortion, and we look forward to working with Christians across the nation to abolish the plague of abortion in our land immediately, without exceptions or compromises.</p>
+<div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow noopener noreferrer"
+				data-shared="sharing-twitter-278"
+				class="share-twitter sd-button share-icon"
+				href="index9a7b.html?share=twitter"
+				target="_blank"
+				aria-labelledby="sharing-twitter-278"
+				>
+				<span id="sharing-twitter-278" hidden>Share on X (Opens in new window)</span>
+				<span>X</span>
+			</a></li><li class="share-facebook"><a rel="nofollow noopener noreferrer"
+				data-shared="sharing-facebook-278"
+				class="share-facebook sd-button share-icon"
+				href="index5a58.html?share=facebook"
+				target="_blank"
+				aria-labelledby="sharing-facebook-278"
+				>
+				<span id="sharing-facebook-278" hidden>Share on Facebook (Opens in new window)</span>
+				<span>Facebook</span>
+			</a></li><li class="share-end"></li></ul></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-178169672-278-69fb6e864b702' data-src='//widgets.wp.com/likes/index.html?ver=20260506#blog_id=178169672&amp;post_id=278&amp;origin=abolishingabortionsouthernbaptgmailcom.wordpress.com&amp;obj_id=178169672-278-69fb6e864b702&amp;domain=southernbaptistsabolishingabortion.com' data-name='like-post-frame-178169672-278-69fb6e864b702' data-title='Like or Reblog'><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height: 55px;'><span class='button'><span>Like</span></span> <span class='loading'>Loading...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div>
+<div id='jp-relatedposts' class='jp-relatedposts' >
+	
+</div></div>	</div><!-- .entry-content -->
+
+	<footer class="entry-footer responsive-max-width">
+		<span class="byline"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Posted by</span><span class="author vcard"><a class="url fn n" href="../../../../author/abolishingabortionsouthernbaptgmailcom/index.html">Southern Baptists for Abolishing Abortion</a></span></span><span class="posted-on"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><path id="a" d="M0 0h24v24H0V0z"></path></defs><clipPath id="b"><use xlink:href="#a" overflow="visible"></use></clipPath><path clip-path="url(#b)" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"></path></svg><a href="index.html" rel="bookmark"><time class="entry-date published" datetime="2021-06-26T20:35:14-05:00">June 26, 2021</time><time class="updated" datetime="2021-06-29T23:13:15-05:00">June 29, 2021</time></a></span><span class="cat-links"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Posted in</span><a href="../../../../category/uncategorized/index.html" rel="category tag">Uncategorized</a></span><span class="tags-links"><svg class="svg-icon" width="16" height="16" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><span class="screen-reader-text">Tags:</span><a href="../../../../tag/critique/index.html" rel="tag">Critique</a>, <a href="../../../../tag/resolution/index.html" rel="tag">Resolution</a>, <a href="../../../../tag/sbc/index.html" rel="tag">SBC</a></span>	</footer><!-- .entry-footer -->
+
+				
+</article><!-- #post-${ID} -->
+
+	<nav class="navigation post-navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="../../23/mother-of-nine-expecting-special-needs-child/index.html" rel="prev"><span class="meta-nav" aria-hidden="true">Previous Post</span> <span class="screen-reader-text">Previous post:</span> <br/><span class="post-title">Mother of Nine Expecting Special Needs&nbsp;Child</span></a></div><div class="nav-next"><a href="../../../09/29/incremental-regulationism-mans-wisdom-or-true-wisdom/index.html" rel="next"><span class="meta-nav" aria-hidden="true">Next Post</span> <span class="screen-reader-text">Next post:</span> <br/><span class="post-title">Incremental Regulationism: Man&#8217;s Wisdom or True&nbsp;Wisdom?</span></a></div></div>
+	</nav>
+<div id="comments" class="comments-area responsive-max-width">
+
+			<h2 class="comments-title">
+			6 thoughts on &ldquo;<span>Heavy-hitting SBC Abortion Abolition Resolution Authors Respond to SBC&nbsp;Academics</span>&rdquo;		</h2><!-- .comments-title -->
+
+		
+		<ol class="comment-list">
+					<li id="comment-49" class="comment even thread-even depth-1">
+			<article id="div-comment-49" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img referrerpolicy="no-referrer" alt='Rob&#039;s avatar' src='https://2.gravatar.com/avatar/8679bd5a1905b53f4e48bb4a5751ac06f4a614a0e0ea8ed6ee843333b03c9605?s=32&amp;d=identicon&amp;r=G' srcset='https://2.gravatar.com/avatar/8679bd5a1905b53f4e48bb4a5751ac06f4a614a0e0ea8ed6ee843333b03c9605?s=32&#038;d=identicon&#038;r=G 1x, https://2.gravatar.com/avatar/8679bd5a1905b53f4e48bb4a5751ac06f4a614a0e0ea8ed6ee843333b03c9605?s=48&#038;d=identicon&#038;r=G 1.5x, https://2.gravatar.com/avatar/8679bd5a1905b53f4e48bb4a5751ac06f4a614a0e0ea8ed6ee843333b03c9605?s=64&#038;d=identicon&#038;r=G 2x, https://2.gravatar.com/avatar/8679bd5a1905b53f4e48bb4a5751ac06f4a614a0e0ea8ed6ee843333b03c9605?s=96&#038;d=identicon&#038;r=G 3x, https://2.gravatar.com/avatar/8679bd5a1905b53f4e48bb4a5751ac06f4a614a0e0ea8ed6ee843333b03c9605?s=128&#038;d=identicon&#038;r=G 4x' class='avatar avatar-32' height='32' width='32' decoding='async' />						<b class="fn">Rob</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-49"><time datetime="2021-06-26T23:11:08-05:00">June 26, 2021 at 11:11 pm</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>The SBC should consider their pharisaical ways.  We’ll all be waiting to hear their scriptural stance for any form of abortion allowance. This is funny business. Mostly, disgusting.</p>
+<p id="comment-like-49" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="indexa57e.html?like_comment=49&amp;_wpnonce=a568636f65" class="comment-like-link needs-login" rel="nofollow" data-blog="178169672"><span>Like</span></a><span id="comment-like-count-49" class="comment-like-feedback">Like</span></p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="index21e4.html?replytocom=49#respond" data-commentid="49" data-postid="278" data-belowelement="div-comment-49" data-respondelement="respond" data-replyto="Reply to Rob" aria-label="Reply to Rob">Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-50" class="comment byuser comment-author-sjtuttle10 odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-50" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img referrerpolicy="no-referrer" alt='Shellbiz&#039;s avatar' src='https://1.gravatar.com/avatar/46fe2463dbb6ab9a0a648e5df0dac535f01da57528fa5625fd45efb613c07253?s=32&amp;d=identicon&amp;r=G' srcset='https://1.gravatar.com/avatar/46fe2463dbb6ab9a0a648e5df0dac535f01da57528fa5625fd45efb613c07253?s=32&#038;d=identicon&#038;r=G 1x, https://1.gravatar.com/avatar/46fe2463dbb6ab9a0a648e5df0dac535f01da57528fa5625fd45efb613c07253?s=48&#038;d=identicon&#038;r=G 1.5x, https://1.gravatar.com/avatar/46fe2463dbb6ab9a0a648e5df0dac535f01da57528fa5625fd45efb613c07253?s=64&#038;d=identicon&#038;r=G 2x, https://1.gravatar.com/avatar/46fe2463dbb6ab9a0a648e5df0dac535f01da57528fa5625fd45efb613c07253?s=96&#038;d=identicon&#038;r=G 3x, https://1.gravatar.com/avatar/46fe2463dbb6ab9a0a648e5df0dac535f01da57528fa5625fd45efb613c07253?s=128&#038;d=identicon&#038;r=G 4x' class='avatar avatar-32' height='32' width='32' decoding='async' />						<b class="fn"><a href="http://sjtuttle10.wordpress.com/" class="url" rel="ugc external nofollow">Shellbiz</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-50"><time datetime="2021-06-28T11:11:34-05:00">June 28, 2021 at 11:11 am</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I am in agreement with the abolitionists that ectopic pregnancies do not need abortion coverage. This excerpt is very true. My ectopic pregnancy was not something I needed an abortionist, nor an abortion, for. &#8220;They argue, &#8216;this resolution would prohibit the attempt to save the life of the mother&#8217; merely because it did not include verbiage regarding EPs. At best, this fallacious argument is a smokescreen that must be rejected on its face. There is no issue of hostility towards mothers on the part of the Resolution, rather, the authors of the resolution do not give ground to the fallacious presuppositions which lay at the heart of the pro-abortion (and pro-life) industry’s &#8216;life of the mother&#8217; exceptions.&#8221;</p>
+<p id="comment-like-50" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="indexdc92.html?like_comment=50&amp;_wpnonce=6d40a3f43e" class="comment-like-link needs-login" rel="nofollow" data-blog="178169672"><span>Like</span></a><span id="comment-like-count-50" class="comment-like-feedback">Like</span></p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="indexed49.html?replytocom=50#respond" data-commentid="50" data-postid="278" data-belowelement="div-comment-50" data-respondelement="respond" data-replyto="Reply to Shellbiz" aria-label="Reply to Shellbiz">Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-51" class="comment byuser comment-author-nathanweisser even thread-even depth-1">
+			<article id="div-comment-51" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img referrerpolicy="no-referrer" alt='nathanweisser&#039;s avatar' src='https://2.gravatar.com/avatar/2c216e9567f1e6d3ef735c42ee9591fb79b012eed8f40ccee4fdfe49189a1f92?s=32&amp;d=identicon&amp;r=G' srcset='https://2.gravatar.com/avatar/2c216e9567f1e6d3ef735c42ee9591fb79b012eed8f40ccee4fdfe49189a1f92?s=32&#038;d=identicon&#038;r=G 1x, https://2.gravatar.com/avatar/2c216e9567f1e6d3ef735c42ee9591fb79b012eed8f40ccee4fdfe49189a1f92?s=48&#038;d=identicon&#038;r=G 1.5x, https://2.gravatar.com/avatar/2c216e9567f1e6d3ef735c42ee9591fb79b012eed8f40ccee4fdfe49189a1f92?s=64&#038;d=identicon&#038;r=G 2x, https://2.gravatar.com/avatar/2c216e9567f1e6d3ef735c42ee9591fb79b012eed8f40ccee4fdfe49189a1f92?s=96&#038;d=identicon&#038;r=G 3x, https://2.gravatar.com/avatar/2c216e9567f1e6d3ef735c42ee9591fb79b012eed8f40ccee4fdfe49189a1f92?s=128&#038;d=identicon&#038;r=G 4x' class='avatar avatar-32' height='32' width='32' loading='lazy' decoding='async' />						<b class="fn"><a href="http://gravatar.com/nathanweisser" class="url" rel="ugc external nofollow">nathanweisser</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-51"><time datetime="2021-07-02T09:47:05-05:00">July 2, 2021 at 9:47 am</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Very well made response.</p>
+<p id="comment-like-51" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="index4149.html?like_comment=51&amp;_wpnonce=ecb7053436" class="comment-like-link needs-login" rel="nofollow" data-blog="178169672"><span>Like</span></a><span id="comment-like-count-51" class="comment-like-feedback">Like</span></p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="index740f.html?replytocom=51#respond" data-commentid="51" data-postid="278" data-belowelement="div-comment-51" data-respondelement="respond" data-replyto="Reply to nathanweisser" aria-label="Reply to nathanweisser">Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-52" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-52" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img referrerpolicy="no-referrer" alt='Randy&#039;s avatar' src='https://1.gravatar.com/avatar/a9a8529b9e03d1c695e5f4ecfe2f9f276648087056773decbe293e45e254608b?s=32&amp;d=identicon&amp;r=G' srcset='https://1.gravatar.com/avatar/a9a8529b9e03d1c695e5f4ecfe2f9f276648087056773decbe293e45e254608b?s=32&#038;d=identicon&#038;r=G 1x, https://1.gravatar.com/avatar/a9a8529b9e03d1c695e5f4ecfe2f9f276648087056773decbe293e45e254608b?s=48&#038;d=identicon&#038;r=G 1.5x, https://1.gravatar.com/avatar/a9a8529b9e03d1c695e5f4ecfe2f9f276648087056773decbe293e45e254608b?s=64&#038;d=identicon&#038;r=G 2x, https://1.gravatar.com/avatar/a9a8529b9e03d1c695e5f4ecfe2f9f276648087056773decbe293e45e254608b?s=96&#038;d=identicon&#038;r=G 3x, https://1.gravatar.com/avatar/a9a8529b9e03d1c695e5f4ecfe2f9f276648087056773decbe293e45e254608b?s=128&#038;d=identicon&#038;r=G 4x' class='avatar avatar-32' height='32' width='32' loading='lazy' decoding='async' />						<b class="fn">Randy</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-52"><time datetime="2021-07-04T16:33:13-05:00">July 4, 2021 at 4:33 pm</time></a>					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>It is not our place (written as a Christian, but not an SBC “member”) to guess at the final outcomes of a God given resolution on the secular community, though we do know the initial reply. It is ours to obey God (first), obey our constitution in practicing our duty of religious expression under amendment one, and then convincingly advocate as the Resolution does well, not only spiritually which will be rejected by unbelievers, but objectively with the wisdom of God provided us which cannot be refuted (as noted by the response above) without lies and other deceptive practices.</p>
+<p id="comment-like-52" data-liked=comment-not-liked class="comment-likes comment-not-liked"><a href="index32a2.html?like_comment=52&amp;_wpnonce=8cdf713551" class="comment-like-link needs-login" rel="nofollow" data-blog="178169672"><span>Like</span></a><span id="comment-like-count-52" class="comment-like-feedback">Like</span></p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="indexcff9.html?replytocom=52#respond" data-commentid="52" data-postid="278" data-belowelement="div-comment-52" data-respondelement="respond" data-replyto="Reply to Randy" aria-label="Reply to Randy">Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-60" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href="../../../09/29/incremental-regulationism-mans-wisdom-or-true-wisdom/index.html" class="url" rel="ugc">Incremental Regulationism: Man&#8217;s Wisdom or True Wisdom? &#8211; Southern Baptists for Abolishing Abortion</a> 			</div>
+		</li><!-- #comment-## -->
+		<li id="comment-95" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href="../../../../2022/06/02/keeping-up-with-the-sbc-abortion-abolition-debate/index.html" class="url" rel="ugc">Keeping up with the SBC Abortion Abolition Debate &#8211; Southern Baptists for Abolishing Abortion</a> 			</div>
+		</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a comment <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://southernbaptistsabolishingabortion.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+
+
+
+<div class="comment-form__verbum transparent"></div><div class="verbum-form-meta"><input type='hidden' name='comment_post_ID' value='278' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+
+			<input type="hidden" name="highlander_comment_nonce" id="highlander_comment_nonce" value="4e77f25f7a" />
+			<input type="hidden" name="verbum_show_subscription_modal" value="" /></div><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="3dbb7a1eb8" /></p><p style="display: none !important;" class="akismet-fields-container" data-prefix="ak_"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="232"/><script>
+document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );
+</script>
+</p></form>	</div><!-- #respond -->
+	
+</div><!-- #comments -->
+
+		</main><!-- #main -->
+	</section><!-- #primary -->
+
+
+	</div><!-- #content -->
+
+	
+	<footer id="colophon" class="site-footer responsive-max-width">
+			
+	
+		<div class="site-info">
+		<a class="site-name" href="../../../../index.html" rel="home">Southern Baptists for Abolishing Abortion</a><span class="comma">,</span>
+<a href="https://wordpress.com/?ref=footer_blog" rel="nofollow">Blog at WordPress.com.</a>	</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+
+</div><!-- #page -->
+
+<!--  -->
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/files/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/pub/hever/*","/wp-content/themes/pub/varia/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script id="grofiles-cards-js" src="../../../../../0.gravatar.com/js/hovercards/hovercards.min5790.js?ver=202619d1133547e8a1f2801609f51cef12522abe7f6647d869e9fbc974fe356a37e613"></script>
+<script id="wpgroho-js-extra">
+var WPGroHo = {"my_hash":""};
+//# sourceURL=wpgroho-js-extra
+</script>
+<script crossorigin='anonymous' type='text/javascript'  src='../../../../wp-content/mu-plugins/gravatar-hovercards/wpgrohoe8bd.js?m=1610363240i'></script>
+
+	<script>
+		// Initialize and attach hovercards to all gravatars
+		( function() {
+			function init() {
+				if ( typeof Gravatar === 'undefined' ) {
+					return;
+				}
+
+				if ( typeof Gravatar.init !== 'function' ) {
+					return;
+				}
+
+				Gravatar.profile_cb = function ( hash, id ) {
+					WPGroHo.syncProfileData( hash, id );
+				};
+
+				Gravatar.my_hash = WPGroHo.my_hash;
+				Gravatar.init(
+					'body',
+					'#wp-admin-bar-my-account',
+					{
+						i18n: {
+							'Edit your profile →': 'Edit your profile →',
+							'View profile →': 'View profile →',
+							'Contact': 'Contact',
+							'Send money': 'Send money',
+							'Sorry, we are unable to load this Gravatar profile.': 'Sorry, we are unable to load this Gravatar profile.',
+							'Gravatar not found.': 'Gravatar not found.',
+							'Too Many Requests.': 'Too Many Requests.',
+							'Internal Server Error.': 'Internal Server Error.',
+							'Is this you?': 'Is this you?',
+							'Claim your free profile.': 'Claim your free profile.',
+							'Email': 'Email',
+							'Home Phone': 'Home Phone',
+							'Work Phone': 'Work Phone',
+							'Cell Phone': 'Cell Phone',
+							'Contact Form': 'Contact Form',
+							'Calendar': 'Calendar',
+						},
+					}
+				);
+			}
+
+			if ( document.readyState !== 'loading' ) {
+				init();
+			} else {
+				document.addEventListener( 'DOMContentLoaded', init );
+			}
+		} )();
+	</script>
+
+		<div style="display:none">
+	<div class="grofile-hash-map-a96f94150108320b11537c894311910b">
+	</div>
+	<div class="grofile-hash-map-b0afd496a86cf932739fc183c97b8e70">
+	</div>
+	<div class="grofile-hash-map-9417a03325582f36a92a8380ddd816ff">
+	</div>
+	<div class="grofile-hash-map-aecc363e1fc6937789e1d4d24765d39a">
+	</div>
+	</div>
+		<div id="actionbar" dir="ltr" style="display: none;"
+			class="actnbr-pub-hever actnbr-has-follow actnbr-has-actions">
+		<ul>
+								<li class="actnbr-btn actnbr-hidden">
+						<a class="actnbr-action actnbr-actn-comment" href="index.html#comments">
+							<svg class="gridicon gridicons-comment" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M12 16l-5 5v-5H5c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v9c0 1.1-.9 2-2 2h-7z"/></g></svg>							<span>Comment						</span>
+						</a>
+					</li>
+									<li class="actnbr-btn actnbr-hidden">
+						<a class="actnbr-action actnbr-actn-reblog" href="#">
+							<svg class="gridicon gridicons-reblog" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M22.086 9.914L20 7.828V18c0 1.105-.895 2-2 2h-7v-2h7V7.828l-2.086 2.086L14.5 8.5 19 4l4.5 4.5-1.414 1.414zM6 16.172V6h7V4H6c-1.105 0-2 .895-2 2v10.172l-2.086-2.086L.5 15.5 5 20l4.5-4.5-1.414-1.414L6 16.172z"/></g></svg><span>Reblog</span>
+						</a>
+					</li>
+									<li class="actnbr-btn actnbr-hidden">
+								<a class="actnbr-action actnbr-actn-follow " href="#">
+			<svg class="gridicon" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path clip-rule="evenodd" d="m4 4.5h12v6.5h1.5v-6.5-1.5h-1.5-12-1.5v1.5 10.5c0 1.1046.89543 2 2 2h7v-1.5h-7c-.27614 0-.5-.2239-.5-.5zm10.5 2h-9v1.5h9zm-5 3h-4v1.5h4zm3.5 1.5h-1v1h1zm-1-1.5h-1.5v1.5 1 1.5h1.5 1 1.5v-1.5-1-1.5h-1.5zm-2.5 2.5h-4v1.5h4zm6.5 1.25h1.5v2.25h2.25v1.5h-2.25v2.25h-1.5v-2.25h-2.25v-1.5h2.25z"  fill-rule="evenodd"></path></svg>
+			<span>Subscribe</span>
+		</a>
+		<a class="actnbr-action actnbr-actn-following  no-display" href="#">
+			<svg class="gridicon" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 4.5H4V15C4 15.2761 4.22386 15.5 4.5 15.5H11.5V17H4.5C3.39543 17 2.5 16.1046 2.5 15V4.5V3H4H16H17.5V4.5V12.5H16V4.5ZM5.5 6.5H14.5V8H5.5V6.5ZM5.5 9.5H9.5V11H5.5V9.5ZM12 11H13V12H12V11ZM10.5 9.5H12H13H14.5V11V12V13.5H13H12H10.5V12V11V9.5ZM5.5 12H9.5V13.5H5.5V12Z" fill="#008A20"></path><path class="following-icon-tick" d="M13.5 16L15.5 18L19 14.5" stroke="#008A20" stroke-width="1.5"></path></svg>
+			<span>Subscribed</span>
+		</a>
+							<div class="actnbr-popover tip tip-top-left actnbr-notice" id="follow-bubble">
+							<div class="tip-arrow"></div>
+							<div class="tip-inner actnbr-follow-bubble">
+															<ul>
+											<li class="actnbr-sitename">
+			<a href="../../../../index.html">
+				<img loading='lazy' alt='' src='../../../../wp-content/uploads/2021/09/imageae05.jpg?w=50' srcset='https://southernbaptistsabolishingabortion.com/wp-content/uploads/2021/09/image.jpg?w=50 1x, https://southernbaptistsabolishingabortion.com/wp-content/uploads/2021/09/image.jpg?w=75 1.5x, https://southernbaptistsabolishingabortion.com/wp-content/uploads/2021/09/image.jpg?w=100 2x, https://southernbaptistsabolishingabortion.com/wp-content/uploads/2021/09/image.jpg?w=150 3x, https://southernbaptistsabolishingabortion.com/wp-content/uploads/2021/09/image.jpg?w=200 4x' class='avatar avatar-50' height='50' width='50' />				Southern Baptists for Abolishing Abortion			</a>
+		</li>
+										<div class="actnbr-message no-display"></div>
+									<form method="post" action="https://subscribe.wordpress.com/" accept-charset="utf-8" style="display: none;">
+																				<div>
+										<input type="email" name="email" placeholder="Enter your email address" class="actnbr-email-field" aria-label="Enter your email address" />
+										</div>
+										<input type="hidden" name="action" value="subscribe" />
+										<input type="hidden" name="blog_id" value="178169672" />
+										<input type="hidden" name="source" value="index.html" />
+										<input type="hidden" name="sub-type" value="actionbar-follow" />
+										<input type="hidden" id="_wpnonce" name="_wpnonce" value="b9d34a6d14" />										<div class="actnbr-button-wrap">
+											<button type="submit" value="Sign me up">
+												Sign me up											</button>
+										</div>
+									</form>
+									<li class="actnbr-login-nudge">
+										<div>
+											Already have a WordPress.com account? <a href="https://wordpress.com/log-in?redirect_to=https%3A%2F%2Fr-login.wordpress.com%2Fremote-login.php%3Faction%3Dlink%26back%3Dhttps%253A%252F%252Fsouthernbaptistsabolishingabortion.com%252F2021%252F06%252F26%252Fheavy-hitting-sbc-abortion-abolition-resolution-authors-respond-to-sbc-academics%252F">Log in now.</a>										</div>
+									</li>
+								</ul>
+															</div>
+						</div>
+					</li>
+							<li class="actnbr-ellipsis actnbr-hidden">
+				<svg class="gridicon gridicons-ellipsis" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M7 12c0 1.104-.896 2-2 2s-2-.896-2-2 .896-2 2-2 2 .896 2 2zm12-2c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm-7 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2z"/></g></svg>				<div class="actnbr-popover tip tip-top-left actnbr-more">
+					<div class="tip-arrow"></div>
+					<div class="tip-inner">
+						<ul>
+								<li class="actnbr-sitename">
+			<a href="../../../../index.html">
+				<img loading='lazy' alt='' src='../../../../wp-content/uploads/2021/09/imageae05.jpg?w=50' srcset='https://southernbaptistsabolishingabortion.com/wp-content/uploads/2021/09/image.jpg?w=50 1x, https://southernbaptistsabolishingabortion.com/wp-content/uploads/2021/09/image.jpg?w=75 1.5x, https://southernbaptistsabolishingabortion.com/wp-content/uploads/2021/09/image.jpg?w=100 2x, https://southernbaptistsabolishingabortion.com/wp-content/uploads/2021/09/image.jpg?w=150 3x, https://southernbaptistsabolishingabortion.com/wp-content/uploads/2021/09/image.jpg?w=200 4x' class='avatar avatar-50' height='50' width='50' />				Southern Baptists for Abolishing Abortion			</a>
+		</li>
+								<li class="actnbr-folded-follow">
+										<a class="actnbr-action actnbr-actn-follow " href="#">
+			<svg class="gridicon" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path clip-rule="evenodd" d="m4 4.5h12v6.5h1.5v-6.5-1.5h-1.5-12-1.5v1.5 10.5c0 1.1046.89543 2 2 2h7v-1.5h-7c-.27614 0-.5-.2239-.5-.5zm10.5 2h-9v1.5h9zm-5 3h-4v1.5h4zm3.5 1.5h-1v1h1zm-1-1.5h-1.5v1.5 1 1.5h1.5 1 1.5v-1.5-1-1.5h-1.5zm-2.5 2.5h-4v1.5h4zm6.5 1.25h1.5v2.25h2.25v1.5h-2.25v2.25h-1.5v-2.25h-2.25v-1.5h2.25z"  fill-rule="evenodd"></path></svg>
+			<span>Subscribe</span>
+		</a>
+		<a class="actnbr-action actnbr-actn-following  no-display" href="#">
+			<svg class="gridicon" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 4.5H4V15C4 15.2761 4.22386 15.5 4.5 15.5H11.5V17H4.5C3.39543 17 2.5 16.1046 2.5 15V4.5V3H4H16H17.5V4.5V12.5H16V4.5ZM5.5 6.5H14.5V8H5.5V6.5ZM5.5 9.5H9.5V11H5.5V9.5ZM12 11H13V12H12V11ZM10.5 9.5H12H13H14.5V11V12V13.5H13H12H10.5V12V11V9.5ZM5.5 12H9.5V13.5H5.5V12Z" fill="#008A20"></path><path class="following-icon-tick" d="M13.5 16L15.5 18L19 14.5" stroke="#008A20" stroke-width="1.5"></path></svg>
+			<span>Subscribed</span>
+		</a>
+								</li>
+														<li class="actnbr-signup"><a href="https://wordpress.com/start/">Sign up</a></li>
+							<li class="actnbr-login"><a href="https://wordpress.com/log-in?redirect_to=https%3A%2F%2Fr-login.wordpress.com%2Fremote-login.php%3Faction%3Dlink%26back%3Dhttps%253A%252F%252Fsouthernbaptistsabolishingabortion.com%252F2021%252F06%252F26%252Fheavy-hitting-sbc-abortion-abolition-resolution-authors-respond-to-sbc-academics%252F">Log in</a></li>
+																<li class="actnbr-shortlink">
+										<a href="https://wp.me/pc3A4o-4u">
+											<span class="actnbr-shortlink__text">Copy shortlink</span>
+											<span class="actnbr-shortlink__icon"><svg class="gridicon gridicons-checkmark" height="16" width="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M9 19.414l-6.707-6.707 1.414-1.414L9 16.586 20.293 5.293l1.414 1.414"/></g></svg></span>
+										</a>
+									</li>
+																<li class="flb-report">
+									<a href="https://wordpress.com/abuse/?report_url=https://southernbaptistsabolishingabortion.com/2021/06/26/heavy-hitting-sbc-abortion-abolition-resolution-authors-respond-to-sbc-academics/" target="_blank" rel="noopener noreferrer">
+										Report this content									</a>
+								</li>
+															<li class="actnbr-reader">
+									<a href="https://wordpress.com/reader/blogs/178169672/posts/278">
+										View post in Reader									</a>
+								</li>
+															<li class="actnbr-subs">
+									<a href="https://subscribe.wordpress.com/">Manage subscriptions</a>
+								</li>
+																<li class="actnbr-fold"><a href="#">Collapse this bar</a></li>
+														</ul>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	
+<script>
+window.addEventListener( "DOMContentLoaded", function( event ) {
+	var link = document.createElement( "link" );
+	link.href = "../../../../wp-content/mu-plugins/actionbar/actionbar3d0f.css?v=20250116";
+	link.type = "text/css";
+	link.rel = "stylesheet";
+	document.head.appendChild( link );
+
+	var script = document.createElement( "script" );
+	script.src = "../../../../wp-content/mu-plugins/actionbar/actionbarb20e.js?v=20250204";
+	document.body.appendChild( script );
+} );
+</script>
+
+			<div id="jp-carousel-loading-overlay">
+			<div id="jp-carousel-loading-wrapper">
+				<span id="jp-carousel-library-loading"><svg class="jetpack-spinner" width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><circle cx="50" cy="50" r="46" fill="none" stroke="#ddd" stroke-width="8"/><path d="M 50 4 A 46 46 0 0 1 96 50" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"><animateTransform attributeName="transform" type="rotate" dur="1.4s" from="0 50 50" to="360 50 50" repeatCount="indefinite"/></path></svg></span>
+			</div>
+		</div>
+		<div class="jp-carousel-overlay" style="display: none;">
+
+		<div class="jp-carousel-container">
+			<!-- The Carousel Swiper -->
+			<div
+				class="jp-carousel-wrap swiper jp-carousel-swiper-container jp-carousel-transitions"
+				itemscope
+				itemtype="https://schema.org/ImageGallery">
+				<div class="jp-carousel swiper-wrapper"></div>
+				<div class="jp-swiper-button-prev swiper-button-prev">
+					<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<mask id="maskPrev" mask-type="alpha" maskUnits="userSpaceOnUse" x="8" y="6" width="9" height="12">
+							<path d="M16.2072 16.59L11.6496 12L16.2072 7.41L14.8041 6L8.8335 12L14.8041 18L16.2072 16.59Z" fill="white"/>
+						</mask>
+						<g mask="url(#maskPrev)">
+							<rect x="0.579102" width="23.8823" height="24" fill="#FFFFFF"/>
+						</g>
+					</svg>
+				</div>
+				<div class="jp-swiper-button-next swiper-button-next">
+					<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<mask id="maskNext" mask-type="alpha" maskUnits="userSpaceOnUse" x="8" y="6" width="8" height="12">
+							<path d="M8.59814 16.59L13.1557 12L8.59814 7.41L10.0012 6L15.9718 12L10.0012 18L8.59814 16.59Z" fill="white"/>
+						</mask>
+						<g mask="url(#maskNext)">
+							<rect x="0.34375" width="23.8822" height="24" fill="#FFFFFF"/>
+						</g>
+					</svg>
+				</div>
+			</div>
+			<!-- The main close buton -->
+			<div class="jp-carousel-close-hint">
+				<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<mask id="maskClose" mask-type="alpha" maskUnits="userSpaceOnUse" x="5" y="5" width="15" height="14">
+						<path d="M19.3166 6.41L17.9135 5L12.3509 10.59L6.78834 5L5.38525 6.41L10.9478 12L5.38525 17.59L6.78834 19L12.3509 13.41L17.9135 19L19.3166 17.59L13.754 12L19.3166 6.41Z" fill="white"/>
+					</mask>
+					<g mask="url(#maskClose)">
+						<rect x="0.409668" width="23.8823" height="24" fill="#FFFFFF"/>
+					</g>
+				</svg>
+			</div>
+			<!-- Image info, comments and meta -->
+			<div class="jp-carousel-info">
+				<div class="jp-carousel-info-footer">
+					<div class="jp-carousel-pagination-container">
+						<div class="jp-swiper-pagination swiper-pagination"></div>
+						<div class="jp-carousel-pagination"></div>
+					</div>
+					<div class="jp-carousel-photo-title-container">
+						<h2 class="jp-carousel-photo-caption"></h2>
+					</div>
+					<div class="jp-carousel-photo-icons-container">
+						<a href="#" class="jp-carousel-icon-btn jp-carousel-icon-info" aria-label="Toggle photo metadata visibility">
+							<span class="jp-carousel-icon">
+								<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="maskInfo" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="21" height="20">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M12.7537 2C7.26076 2 2.80273 6.48 2.80273 12C2.80273 17.52 7.26076 22 12.7537 22C18.2466 22 22.7046 17.52 22.7046 12C22.7046 6.48 18.2466 2 12.7537 2ZM11.7586 7V9H13.7488V7H11.7586ZM11.7586 11V17H13.7488V11H11.7586ZM4.79292 12C4.79292 16.41 8.36531 20 12.7537 20C17.142 20 20.7144 16.41 20.7144 12C20.7144 7.59 17.142 4 12.7537 4C8.36531 4 4.79292 7.59 4.79292 12Z" fill="white"/>
+									</mask>
+									<g mask="url(#maskInfo)">
+										<rect x="0.8125" width="23.8823" height="24" fill="#FFFFFF"/>
+									</g>
+								</svg>
+							</span>
+						</a>
+												<a href="#" class="jp-carousel-icon-btn jp-carousel-icon-comments" aria-label="Toggle photo comments visibility">
+							<span class="jp-carousel-icon">
+								<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="maskComments" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="21" height="20">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M4.3271 2H20.2486C21.3432 2 22.2388 2.9 22.2388 4V16C22.2388 17.1 21.3432 18 20.2486 18H6.31729L2.33691 22V4C2.33691 2.9 3.2325 2 4.3271 2ZM6.31729 16H20.2486V4H4.3271V18L6.31729 16Z" fill="white"/>
+									</mask>
+									<g mask="url(#maskComments)">
+										<rect x="0.34668" width="23.8823" height="24" fill="#FFFFFF"/>
+									</g>
+								</svg>
+
+								<span class="jp-carousel-has-comments-indicator" aria-label="This image has comments."></span>
+							</span>
+						</a>
+											</div>
+				</div>
+				<div class="jp-carousel-info-extra">
+					<div class="jp-carousel-info-content-wrapper">
+						<div class="jp-carousel-photo-title-container">
+							<h2 class="jp-carousel-photo-title"></h2>
+						</div>
+						<div class="jp-carousel-comments-wrapper">
+															<div id="jp-carousel-comments-loading">
+									<span>Loading Comments...</span>
+								</div>
+								<div class="jp-carousel-comments"></div>
+								<div id="jp-carousel-comment-form-container">
+									<span id="jp-carousel-comment-form-spinner"><svg class="jetpack-spinner" width="20" height="20" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><circle cx="50" cy="50" r="46" fill="none" stroke="#ddd" stroke-width="8"/><path d="M 50 4 A 46 46 0 0 1 96 50" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"><animateTransform attributeName="transform" type="rotate" dur="1.4s" from="0 50 50" to="360 50 50" repeatCount="indefinite"/></path></svg></span>
+									<div id="jp-carousel-comment-post-results"></div>
+																														<form id="jp-carousel-comment-form">
+												<label for="jp-carousel-comment-form-comment-field" class="screen-reader-text">Write a Comment...</label>
+												<textarea
+													name="comment"
+													class="jp-carousel-comment-form-field jp-carousel-comment-form-textarea"
+													id="jp-carousel-comment-form-comment-field"
+													placeholder="Write a Comment..."
+												></textarea>
+												<div id="jp-carousel-comment-form-submit-and-info-wrapper">
+													<div id="jp-carousel-comment-form-commenting-as">
+																													<fieldset>
+																<label for="jp-carousel-comment-form-email-field">Email (Required)</label>
+																<input type="text" name="email" class="jp-carousel-comment-form-field jp-carousel-comment-form-text-field" id="jp-carousel-comment-form-email-field" />
+															</fieldset>
+															<fieldset>
+																<label for="jp-carousel-comment-form-author-field">Name (Required)</label>
+																<input type="text" name="author" class="jp-carousel-comment-form-field jp-carousel-comment-form-text-field" id="jp-carousel-comment-form-author-field" />
+															</fieldset>
+															<fieldset>
+																<label for="jp-carousel-comment-form-url-field">Website</label>
+																<input type="text" name="url" class="jp-carousel-comment-form-field jp-carousel-comment-form-text-field" id="jp-carousel-comment-form-url-field" />
+															</fieldset>
+																											</div>
+													<input
+														type="submit"
+														name="submit"
+														class="jp-carousel-comment-form-button"
+														id="jp-carousel-comment-form-button-submit"
+														value="Post Comment" />
+												</div>
+											</form>
+																											</div>
+													</div>
+						<div class="jp-carousel-image-meta">
+							<div class="jp-carousel-title-and-caption">
+								<div class="jp-carousel-photo-info">
+									<h3 class="jp-carousel-caption" itemprop="caption description"></h3>
+								</div>
+
+								<div class="jp-carousel-photo-description"></div>
+							</div>
+							<ul class="jp-carousel-image-exif" style="display: none;"></ul>
+							<a class="jp-carousel-image-download" href="#" target="_blank" style="display: none;">
+								<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="3" width="19" height="18">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M5.84615 5V19H19.7775V12H21.7677V19C21.7677 20.1 20.8721 21 19.7775 21H5.84615C4.74159 21 3.85596 20.1 3.85596 19V5C3.85596 3.9 4.74159 3 5.84615 3H12.8118V5H5.84615ZM14.802 5V3H21.7677V10H19.7775V6.41L9.99569 16.24L8.59261 14.83L18.3744 5H14.802Z" fill="white"/>
+									</mask>
+									<g mask="url(#mask0)">
+										<rect x="0.870605" width="23.8823" height="24" fill="#FFFFFF"/>
+									</g>
+								</svg>
+								<span class="jp-carousel-download-text"></span>
+							</a>
+							<div class="jp-carousel-image-map" style="display: none;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		</div>
+		
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https://southernbaptistsabolishingabortion.com/2021/06/26/heavy-hitting-sbc-abortion-abolition-resolution-authors-respond-to-sbc-academics/":278};
+	</script>
+					<script>
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+	
+	<script type="text/javascript">
+		(function () {
+			var wpcom_reblog = {
+				source: 'toolbar',
+
+				toggle_reblog_box_flair: function (obj_id, post_id) {
+
+					// Go to site selector. This will redirect to their blog if they only have one.
+					const postEndpoint = `https://wordpress.com/post`;
+
+					// Ideally we would use the permalink here, but fortunately this will be replaced with the 
+					// post permalink in the editor.
+					const originalURL = `${ document.location.href }?page_id=${ post_id }`; 
+					
+					const url =
+						postEndpoint +
+						'?url=' +
+						encodeURIComponent( originalURL ) +
+						'&is_post_share=true' +
+						'&v=5';
+
+					const redirect = function () {
+						if (
+							! window.open( url, '_blank' )
+						) {
+							location.href = url;
+						}
+					};
+
+					if ( /Firefox/.test( navigator.userAgent ) ) {
+						setTimeout( redirect, 0 );
+					} else {
+						redirect();
+					}
+				},
+			};
+
+			window.wpcom_reblog = wpcom_reblog;
+		})();
+	</script>
+<script crossorigin='anonymous' type='text/javascript'  src='../../../../wp-content/mu-plugins/likes/queuehandlered36.js?m=1741961244i'></script>
+<script id="wp-hooks-js" src="../../../../../s1.wp.com/wp-content/plugins/gutenberg-core/v23.0.1/build/scripts/hooks/index.minb34d.js?m=1777049355i&amp;ver=7496969728ca0f95732d"></script>
+<script id="wp-i18n-js" src="../../../../../s1.wp.com/wp-content/plugins/gutenberg-core/v23.0.1/build/scripts/i18n/index.minc57b.js?m=1777049355i&amp;ver=125448662852c5e18937"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script id="verbum-settings-js-before">
+window.VerbumComments = {"Log in or provide your name and email to leave a reply.":"Log in or provide your name and email to leave a reply.","Log in or provide your name and email to leave a comment.":"Log in or provide your name and email to leave a comment.","Receive web and mobile notifications for posts on this site.":"Receive web and mobile notifications for posts on this site.","Name":"Name","Email (address never made public)":"Email (address never made public)","Website (optional)":"Website (optional)","Leave a reply. (log in optional)":"Leave a reply. (log in optional)","Leave a comment. (log in optional)":"Leave a comment. (log in optional)","Log in to leave a reply.":"Log in to leave a reply.","Log in to leave a comment.":"Log in to leave a comment.","Logged in via %s":"Logged in via %s","Log out":"Log out","Email":"Email","(Address never made public)":"(Address never made public)","Instantly":"Instantly","Daily":"Daily","Reply":"Reply","Comment":"Comment","WordPress":"WordPress","Weekly":"Weekly","Notify me of new posts":"Notify me of new posts","Email me new posts":"Email me new posts","Email me new comments":"Email me new comments","Cancel":"Cancel","Write a comment...":"Write a comment...","Write a reply...":"Write a reply...","Website":"Website","Optional":"Optional","We'll keep you in the loop!":"We'll keep you in the loop!","Loading your comment...":"Loading your comment...","Discover more from":"Discover more from Southern Baptists for Abolishing Abortion","Subscribe now to keep reading and get access to the full archive.":"Subscribe now to keep reading and get access to the full archive.","Continue reading":"Continue reading","Never miss a beat!":"Never miss a beat!","Interested in getting blog post updates? Simply click the button below to stay in the loop!":"Interested in getting blog post updates? Simply click the button below to stay in the loop!","Enter your email address":"Enter your email address","Subscribe":"Subscribe","Comment sent successfully":"Comment sent successfully","Save my name, email, and website in this browser for the next time I comment.":"Save my name, email, and website in this browser for the next time I comment.","hovercardi18n":{"Edit your profile \u2192":"Edit your profile \u2192","View profile \u2192":"View profile \u2192","Contact":"Contact","Send money":"Send money","Gravatar not found.":"Gravatar not found.","This profile is private.":"This profile is private.","Too Many Requests.":"Too Many Requests.","Internal Server Error.":"Internal Server Error.","Sorry, we are unable to load this Gravatar profile.":"Sorry, we are unable to load this Gravatar profile."},"siteId":178169672,"postId":278,"mustLogIn":false,"requireNameEmail":true,"commentRegistration":false,"connectURL":"https://abolishingabortionsouthernbaptgmailcom.wordpress.com/public.api/connect/?action=request\u0026domain=southernbaptistsabolishingabortion.com","logoutURL":"https://abolishingabortionsouthernbaptgmailcom.wordpress.com/wp-login.php?action=logout\u0026_wpnonce=53acf9cdf4","homeURL":"https://southernbaptistsabolishingabortion.com/","subscribeToBlog":true,"subscribeToComment":true,"isJetpackCommentsLoggedIn":false,"jetpackUsername":"","jetpackUserId":0,"jetpackSignature":"","jetpackAvatar":"https://0.gravatar.com/avatar/?s=96\u0026amp;d=identicon\u0026amp;r=G","enableBlocks":true,"enableSubscriptionModal":true,"currentLocale":"en","isJetpackComments":false,"allowedBlocks":["core/paragraph","core/list","core/code","core/list-item","core/quote","core/image","core/embed","core/quote","core/code"],"embedNonce":"a946cfad8e","verbumBundleUrl":"/wp-content/mu-plugins/jetpack-mu-wpcom-plugin/moon/jetpack_vendor/automattic/jetpack-mu-wpcom/src/features/verbum-comments/dist/index.js","isRTL":false,"vbeCacheBuster":1771405207,"iframeUniqueId":0,"colorScheme":false}
+//# sourceURL=verbum-settings-js-before
+</script>
+<script data-wp-strategy="defer" defer id="verbum-dynamic-loader-js" src="../../../../wp-content/mu-plugins/jetpack-mu-wpcom-plugin/moon/jetpack_vendor/automattic/jetpack-mu-wpcom/src/build/verbum-comments/assets/dynamic-loadera175.js?m=1772518873i&amp;minify=false&amp;ver=8b5296f9195db92c42e4"></script>
+<script id="comment-like-js-extra">
+var comment_like_text = {"loading":"Loading...","swipeUrl":"https://s2.wp.com/wp-content/mu-plugins/comment-likes/js/lib/swipe.js?m=1382645497i&amp;ver=20131008"};
+//# sourceURL=comment-like-js-extra
+</script>
+<script id="coblocks-loader-js-extra">
+var wpcom_coblocks_js = {"coblocks_masonry_js":"https://s2.wp.com/wp-content/plugins/coblocks/2.18.1-simple-rev.4/dist/js/coblocks-masonry.min.js?m=1681832297i","coblocks_lightbox_js":"https://s2.wp.com/wp-content/plugins/coblocks/2.18.1-simple-rev.4/dist/js/coblocks-lightbox.min.js?m=1681832297i","jquery_core_js":"/wp-includes/js/jquery/jquery.min.js","jquery_migrate_js":"/wp-includes/js/jquery/jquery-migrate.min.js","masonry_js":"/wp-includes/js/masonry.min.js","imagesloaded_js":"/wp-includes/js/imagesloaded.min.js"};
+var coblocksLigthboxData = {"closeLabel":"Close Gallery","leftLabel":"Previous","rightLabel":"Next"};
+//# sourceURL=coblocks-loader-js-extra
+</script>
+<script id="jetpack-carousel-js-extra">
+var jetpackSwiperLibraryPath = {"url":"/wp-content/mu-plugins/jetpack-plugin/moon/_inc/blocks/swiper.js"};
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"https://southernbaptistsabolishingabortion.com/wp-admin/admin-ajax.php","nonce":"9c128300fd","display_exif":"1","display_comments":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","image_label":"Open image in full-screen.","download_original":"View full size \u003Cspan class=\"photo-size\"\u003E{0}\u003Cspan class=\"photo-size-times\"\u003E\u00d7\u003C/span\u003E{1}\u003C/span\u003E","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","copyright":"Copyright","comment_registration":"0","require_name_email":"1","login_url":"https://abolishingabortionsouthernbaptgmailcom.wordpress.com/wp-login.php?redirect_to=https%3A%2F%2Fsouthernbaptistsabolishingabortion.com%2F2021%2F06%2F26%2Fheavy-hitting-sbc-abortion-abolition-resolution-authors-respond-to-sbc-academics%2F","blog_id":"178169672","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"stats_query_args":"blog=178169672&v=wpcom&tz=-5&user_id=0&subd=abolishingabortionsouthernbaptgmailcom","is_public":"1"};
+//# sourceURL=jetpack-carousel-js-extra
+</script>
+<script id="sharing-js-js-extra">
+var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
+//# sourceURL=sharing-js-js-extra
+</script>
+<script id="jetpack-script-data-js-before">
+window.JetpackScriptData = {"site":{"host":"wpcom","is_wpcom_platform":true}};
+//# sourceURL=jetpack-script-data-js-before
+</script>
+<script crossorigin='anonymous' type='text/javascript'  src='../../../../_static/index60ef.html??-eJydUNtOwzAM/SGS0I6xvSA+ZfISM9zmptjZtL+nWi+UCQHizT4+l5yYS1Y2RcEoJlSVfT1RZGNTCAOkPPXIprsDdMcPZiX8VB19sj2bVjd73SimkD2qgmf9ZByxjE4jSfkEDosOFGc/itZX9zWwYPbXNemb13YoGWyvBuiSB+F0MCGlOB8PZ4wuFQNVUgARsosMmFHYHCt5t4BsC2VRDgT+kLwOPAw1JjMLJVVGv/Bm4JdC0BMHFLXRj6PdDLyVG9n9oJ0jxq+4W/9fhd+hoAPnrreR4mnq8Bpemt1u+7xvt+2m+wCxzdzJ'></script>
+<script id="sharing-js-js-after">
+var windowOpen;
+			( function () {
+				function matches( el, sel ) {
+					return !! (
+						el.matches && el.matches( sel ) ||
+						el.msMatchesSelector && el.msMatchesSelector( sel )
+					);
+				}
+
+				document.body.addEventListener( 'click', function ( event ) {
+					if ( ! event.target ) {
+						return;
+					}
+
+					var el;
+					if ( matches( event.target, 'a.share-twitter' ) ) {
+						el = event.target;
+					} else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-twitter' ) ) {
+						el = event.target.parentNode;
+					}
+
+					if ( el ) {
+						event.preventDefault();
+
+						// If there's another sharing window open, close it.
+						if ( typeof windowOpen !== 'undefined' ) {
+							windowOpen.close();
+						}
+						windowOpen = window.open( el.getAttribute( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+						return false;
+					}
+				} );
+			} )();
+var windowOpen;
+			( function () {
+				function matches( el, sel ) {
+					return !! (
+						el.matches && el.matches( sel ) ||
+						el.msMatchesSelector && el.msMatchesSelector( sel )
+					);
+				}
+
+				document.body.addEventListener( 'click', function ( event ) {
+					if ( ! event.target ) {
+						return;
+					}
+
+					var el;
+					if ( matches( event.target, 'a.share-facebook' ) ) {
+						el = event.target;
+					} else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-facebook' ) ) {
+						el = event.target.parentNode;
+					}
+
+					if ( el ) {
+						event.preventDefault();
+
+						// If there's another sharing window open, close it.
+						if ( typeof windowOpen !== 'undefined' ) {
+							windowOpen.close();
+						}
+						windowOpen = window.open( el.getAttribute( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+						return false;
+					}
+				} );
+			} )();
+//# sourceURL=sharing-js-js-after
+</script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/","ext":".png","svgUrl":"https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/svg/","svgExt":".svg","source":{"concatemoji":"/wp-includes/js/wp-emoji-release.min.js?m=1764078722i&ver=7.0-RC2-62280"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=/wp-includes/js/wp-emoji-loader.min.js
+</script>
+	<iframe src='https://widgets.wp.com/likes/master.html?ver=20260506#ver=20260506' scrolling='no' id='likes-master' name='likes-master' style='display:none;'></iframe>
+	<div id='likes-other-gravatars' role="dialog" aria-hidden="true" tabindex="-1"><div class="likes-text"><span>%d</span></div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+	<script src="../../../../../stats.wp.com/wa3f3.js?68" defer></script> <script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'178169672','blog_tz':'-5','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+		// Prevent sending pageview tracking from WP-Admin pages.
+		_stq.push(['view', {'blog':'178169672','v':'wpcom','tz':'-5','user_id':'0','post':'278','subd':'abolishingabortionsouthernbaptgmailcom'}]);
+		_stq.push(['extra', {'crypt':'UE5tW3cvZGRxLz01Uz1pQ21CXVk0JS53d2s1cE0sJTZGMi1RMnw5VGFSb344QmYrSlhfejZzLjNvSUtSd3RxJTFJdE02NjNWS285cnM3enAzNi8zeFA4YkFZQ0tMcWZEQjRrdi18eTU9TFpXNDZxWkVmbmFuVVZDVzZuRHlJaG4vfHlGQTZuTmpUMUZsLy1Pb2cyUU43L2NMUl1VW29sUjBuVS8zQ0hkdDduP0V0VXpbP0ZvPTYrdVVRel13WFVlYWk='}]);
+_stq.push([ 'clickTrackerInit', '178169672', '278' ]);
+</script>
+<noscript><img src="../../../../../pixel.wp.com/b0b80.gif?v=noscript" style="height:1px;width:1px;overflow:hidden;position:absolute;bottom:1px;" alt="" /></noscript>
+<meta id="bilmur" property="bilmur:data" content="" data-provider="wordpress.com" data-service="simple" data-site-tz="America/Chicago" data-custom-props="{&quot;logged_in&quot;:&quot;0&quot;,&quot;wptheme&quot;:&quot;pub\/hever&quot;,&quot;wptheme_is_block&quot;:&quot;0&quot;}"  >
+		<script defer src="../../../../wp-content/js/bilmur.min8d2e.js?i=17&amp;m=202619"></script> 	
+<script>
+(function() {
+	'use strict';
+
+	const fetches = {};
+	const promises = {};
+	const urls = {
+		'wp-polyfill': '/wp-includes/js/dist/vendor/wp-polyfill.min.js?m=1775575011i&ver=3.15.0',
+		'verbum': '/wp-content/mu-plugins/jetpack-mu-wpcom-plugin/moon/jetpack_vendor/automattic/jetpack-mu-wpcom/src/build/verbum-comments/verbum-comments.js?m=1777410324i&minify=false&ver=daa565a7d230e522cf9c'
+	};
+	const loaders = {
+		'verbum': () => {
+			fetchExternalScript('wp-polyfill');
+			fetchExternalScript('verbum');
+			promises['wp-polyfill'] = promises['wp-polyfill'] || loadWPScript('wp-polyfill');
+			promises['verbum'] = promises['verbum'] || promises['wp-polyfill'].then( () => loadWPScript('verbum') );
+			return promises['verbum'];
+		},
+		
+	};
+	const scriptExtras = {
+		
+	};
+
+	window.WP_Enqueue_Dynamic_Script = {
+		loadScript: (handle) => {
+			if (!loaders[handle]) {
+				console.error('WP_Enqueue_Dynamic_Script: unregistered script `' + handle + '`.');
+			}
+			return loaders[handle]();
+		}
+	};
+
+	function fetchExternalScript(handle) {
+		if (!urls[handle]) {
+			return Promise.resolve();
+		}
+
+		fetches[handle] = fetches[handle] || fetch(urls[handle], { mode: 'no-cors' });
+		return fetches[handle];
+	}
+
+	function runExtraScript(handle, type, index) {
+		const id = 'wp-enqueue-dynamic-script:' + handle + ':' + type + ':' + (index + 1);
+		const template = document.getElementById(id);
+		if (!template) {
+			return Promise.reject();
+		}
+
+		const script = document.createElement( 'script' );
+		script.innerHTML = template.innerHTML;
+		document.body.appendChild( script );
+		return Promise.resolve();
+	}
+
+	function loadExternalScript(handle) {
+		if (!urls[handle]) {
+			return Promise.resolve();
+		}
+
+		return fetches[handle].then(() => {
+			return new Promise((resolve, reject) => {
+				const script = document.createElement('script');
+				script.onload = () => resolve();
+				script.onerror = (e) => reject(e);
+				script.src = urls[handle];
+				document.body.appendChild(script);
+			});
+		});
+	}
+
+	function loadExtra(handle, pos) {
+		const count = (scriptExtras[handle] && scriptExtras[handle][pos]) || 0;
+		let promise = Promise.resolve();
+
+		for (let i = 0; i < count; i++) {
+			promise = promise.then(() => runExtraScript(handle, pos, i));
+		}
+
+		return promise;
+	}
+
+	function loadWPScript(handle) {
+		// Core loads scripts in this order. See: https://github.com/WordPress/WordPress/blob/a59eb9d39c4fcba834b70c9e8dfd64feeec10ba6/wp-includes/class-wp-scripts.php#L428.
+		return loadExtra(handle, 'translations')
+			.then(() => loadExtra(handle, 'before'))
+			.then(() => loadExternalScript(handle))
+			.then(() => loadExtra(handle, 'after'));
+	}
+} )();
+</script>
+
+</body>
+
+
+</html>

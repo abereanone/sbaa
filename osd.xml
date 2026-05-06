@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+	<ShortName>abolishingaborti</ShortName>
+	<Description>Search Southern Baptists for Abolishing Abortion - </Description>
+	<Contact>help@wordpress.com</Contact>
+	<Url type="application/atom+xml" template="https://southernbaptistsabolishingabortion.com/?s={searchTerms}&amp;feed=atom" />
+	<Url type="rss+xml" template="https://southernbaptistsabolishingabortion.com/?s={searchTerms}&amp;feed=rss2" />
+	<Url type="text/html" template="https://southernbaptistsabolishingabortion.com/?s={searchTerms}" method="GET" />
+	<Url type="application/opensearchdescription+xml" rel="self" template="https://southernbaptistsabolishingabortion.com/osd.xml" />
+	<LongName>Southern Baptists for Abolishing Abortion</LongName>
+	<Image height="16" width="16" type="image/vnd.microsoft.icon">https://southernbaptistsabolishingabortion.com/wp-content/uploads/2021/09/image.jpg?w=16</Image>
+	<Image height="64" width="64" type="image/jpeg">https://southernbaptistsabolishingabortion.com/wp-content/uploads/2021/09/image.jpg?w=64</Image>
+	<Query role="example" searchTerms="photography" />
+	<Tags>abolition-bills abolitionism abolish-abortion ectopic-pregnancy medical-triage medical-necessity resolution critique sbc southern-baptists</Tags>
+	<Developer>Automattic</Developer>
+	<SyndicationRight>open</SyndicationRight>
+	<AdultContent>false</AdultContent>
+	<Language>en</Language>
+	<OutputEncoding>UTF-8</OutputEncoding>
+	<InputEncoding>UTF-8</InputEncoding>
+	<moz:SearchForm>https://southernbaptistsabolishingabortion.com</moz:SearchForm>
+</OpenSearchDescription>
