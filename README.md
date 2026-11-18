@@ -10,3 +10,13 @@ Static mirror of southernbaptistsabolishingabortion.com (originally WordPress, c
 - `wp-content/` - mirrored theme and uploads.
 
 Local-only files (`serve.py`, `serve.bat`, `launchClaude.bat`) are git-ignored.
+
+## Outside links (click counting)
+
+Links to other sites point at `/go/<name>` and open in a new tab; the `# go-links` block in `_redirects` sends each to the real address, and Cloudflare logs the click for `C:/code/site-stats`. `go/links.json` lists the names. After adding or editing a page, run from the repo root (Git Bash needs `MSYS_NO_PATHCONV=1`):
+
+```bash
+node C:/code/go-links/go-links.mjs . --base /go/ --own southernbaptistsabolishingabortion.com,www.southernbaptistsabolishingabortion.com --skip i
+```
+
+Safe to re-run. Old `http://` links stay direct (Cloudflare redirect rules must point at https). Give a link `data-no-go` to leave it alone.
